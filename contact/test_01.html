@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>District 123</title>
+</head>
+<style type="text/css">
+body{
+	color: #800000;
+	ma
+}
+</style>
+<script type="text/javascript">
+function validate(){
+	var user = document.querySelector('#username').value;
+	var password=document.querySelector('#password').value;
+	var confirmpass=document.querySelector('#confirmpass').value;
+	if(user.length!=6){
+		alert("Your username must be at least 6 characters long.Please try again.");
+	}
+	if(password.length!=6){
+		alert("Your password must be at least 6 characters long.Please try again.");
+	}
+	if(!(password==confirmpass))
+	{
+		alert("Your password and Confirm Password Does not match.");
+	}
+}
+</script>
+<body background="#99ff99">
+	<h1 align="center">
+		<font color="000080">School Fees for District 123</font>
+	</h1>
+	<hr width="50%" size="4" color="#800000"></hr>
+	<p align="center">
+		<font color="000080" face="verdana">Please pay the school fees by October 1st</font>
+	</p>
+	<table border="0" cellspacing="0" cellpadding="5" width="300px" align="center" bgcolor="ffff99">
+		<tr>
+			<td width="155px">PTA Dues</td>
+			<td width="93px" align="right">$10.00</td>
+		</tr>
+		<tr>
+			<td width="155px">Book Fee</td>
+			<td width="93px" align="right">$75.00</td>
+		</tr>
+		<tr>
+			<td width="155px">Room Supplies</td>
+			<td width="93px" align="right">$10.00</td>
+		</tr>
+		<tr>
+			<td width="155px">Field Trip</td>
+			<td width="93px" align="right">$15.00</td>
+		</tr>
+		<tr>
+			<td width="155px">Total</td>
+			<td width="93px" align="right">$110.00</td>
+		</tr>
+	</table>
+	<p align="center">Click here to visit our school <a href="http://www.w3schools.com/">textbook partner</a></p>
+	<form align="center" onsubmit="validate();"style="width:600px; margin:0px auto;">
+		<p style="margin-top:10px;height:20px;">
+			<label align="center" style="width:300px;display:block;float:left;" for="username">Username:</label>
+			<input style="width:150px;display:block;float:left;" type="text" id="username" name="Username"/>
+		</p>
+		<p style="clear:both;height:20px;display:block;margin-top:10px;">
+			<label style="width:300px;display:block;float:left;" for="password">Password:</label>
+			<input type="password" style="width:150px;display:block;float:left;" id="password" name="password"/>
+		</p>
+		<p style="clear:both;height:20px;display:block;margin-top:10px;">
+			<label style="width:300px;display:block;float:left;" for="confirmpass">Please Confirm Your Password:</label>
+			<input type="password" style="width:150px;display:block;float:left;" id="confirmpass" name="confirmpass"/>
+		</p>
+		<button type="submit"  style="clear:both;margin-top:10px;" onClick="copyData(this.form)">Log In</button>
+	</form>
+</body>
+</html>

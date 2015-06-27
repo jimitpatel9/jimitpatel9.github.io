@@ -6,17 +6,19 @@ a {
 .selected-border {
   border-bottom: solid 4px #ffffff; }
 
-h1, h2, h3, ul, li, body {
+h1, h2, h3, ul, li, body, p {
   margin: 0;
   padding: 0;
   border: 0;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  list-style: none; }
 
 body {
   background-color: #FFFDD0;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: "Lato",sans-serif; }
 
 /* Header */
 header {
@@ -43,12 +45,10 @@ header {
         font-size: 1.5em;
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-family: "Lato",sans-serif;
         font-weight: 700;
         color: white; }
       header a div h3 {
         letter-spacing: 1px;
-        font-family: "Lato",sans-serif;
         font-weight: 300;
         color: white; }
       @media screen and (max-width: 600px) {
@@ -68,7 +68,6 @@ header {
     header nav ul {
       font-weight: 400;
       font-size: 1.2em;
-      font-family: "Lato",sans-serif;
       color: white; }
       header nav ul li {
         display: inline-block;
@@ -90,7 +89,6 @@ header {
 /* Section i.e Summary */
 section.summary {
   letter-spacing: 1px;
-  font-family: "Lato",sans-serif;
   text-align: center;
   padding: 4em 0; }
   section.summary h1 {
@@ -127,8 +125,7 @@ section.summary {
 section.portfolio {
   margin: 2em auto;
   width: 80%;
-  letter-spacing: 1px;
-  font-family: "Lato",sans-serif; }
+  letter-spacing: 1px; }
   section.portfolio h1 {
     font-weight: 900;
     font-size: 1.5em;
@@ -164,5 +161,72 @@ section.portfolio {
       margin: 0 2%; }
 
 /* End Portfolio */
+/* Footer */
+footer {
+  background-color: #8C92AC;
+  max-width: 100%;
+  font-weight: 400;
+  color: white; }
+  footer .group {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 3em;
+    margin-bottom: 30px; }
+  footer .link {
+    display: inline-block;
+    width: 31%; }
+  footer .bio span {
+    display: block;
+    width: 78px;
+    height: 78px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px; }
+  footer .bio img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid black; }
+  footer .bio p {
+    display: initial;
+    margin-left: 5px;
+    text-align: justify;
+    font-size: 18px;
+    letter-spacing: 1px; }
+  footer .social {
+    margin: 0 3.1%;
+    font-size: 18px;
+    letter-spacing: 1px;
+    vertical-align: top; }
+    footer .social li a {
+      color: black; }
+    footer .social .ico {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      font-size: 35px;
+      color: black;
+      margin-right: 5px; }
+    footer .social li:nth-child(3n+2) {
+      margin: 10% 0; }
+    footer .social li p {
+      display: inline-block;
+      width: 80%;
+      vertical-align: top; }
+  footer nav {
+    vertical-align: top; }
+    footer nav ul li a {
+      color: black;
+      font-size: 18px;
+      letter-spacing: 1px; }
+    footer nav ul li:nth-child(3n+2) {
+      margin: 10% 0; }
+  footer .copyright {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding-bottom: 20px; }
+
+/* End Footer */
 
 /*# sourceMappingURL=main.css.map */
