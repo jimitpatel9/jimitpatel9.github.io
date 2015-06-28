@@ -228,5 +228,55 @@ footer {
     padding-bottom: 20px; }
 
 /* End Footer */
+/*About Page Section*/
+section.abouthead {
+  letter-spacing: 1px;
+  text-align: left;
+  padding: 4em 4.5em;
+  padding-bottom: 0em; }
+  section.abouthead h1 {
+    font-weight: 900;
+    font-size: 2em; }
+  section.abouthead h2 {
+    font-weight: 300;
+    font-size: 1.5em; }
+
+.desc section {
+  display: inline-block;
+  width: 58%;
+  padding: 4em 4.5em;
+  letter-spacing: 1px; }
+  .desc section h2 {
+    font-weight: 900;
+    font-size: 2em;
+    padding-bottom: 10px;
+    padding-top: 20px; }
+  .desc section p {
+    font-weight: 300;
+    font-size: 1.2em;
+    padding: 10px 0px; }
+  .desc section .logos {
+    margin-top: 10px; }
+    .desc section .logos .logs {
+      display: inline-block;
+      max-width: 25%; }
+      .desc section .logos .logs strong {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 10px 0px; }
+    .desc section .logos .logs:nth-child(3n+2) {
+      margin: 0 5%; }
+.desc aside {
+  display: inline-block;
+  width: 30%; }
+
+/*End About Page Section*/
+/*Contact Page Section*/
+.contact-input {
+  width: 100%;
+  padding: 5px; }
+
+/*End Contact Page Section*/
 
 /*# sourceMappingURL=main.css.map */

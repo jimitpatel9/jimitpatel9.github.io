@@ -5,6 +5,7 @@
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
+
 $ipad:600px;
 $mobile:450px;
 
@@ -284,6 +285,65 @@ footer{
 	}
 	
 }
-
-
 /* End Footer */
+/*About Page Section*/
+section.abouthead{
+	letter-spacing: 1px;
+  	text-align: left;
+  	padding: 4em 4.5em;
+  	padding-bottom: 0em;
+  	h1{
+		font-weight: 900;
+		font-size: 2em;
+	}
+	h2{
+		font-weight: 300;
+		font-size: 1.5em;
+	}
+}
+.desc{
+	section{
+		display: inline-block;
+		width: 58%;
+		padding: 4em 4.5em;
+		letter-spacing: 1px;
+		h2{
+			font-weight: 900;
+			font-size: 2em;
+			padding-bottom: 10px;
+			padding-top: 20px;
+		}
+		p{
+			font-weight: 300;
+			font-size: 1.2em;
+			padding: 10px 0px;
+		}
+		.logos{
+			margin-top: 10px;
+			.logs{
+				display: inline-block;
+				max-width: 25%;
+				strong{
+					display: block;
+					text-align: center;
+					width: 100%;
+					padding: 10px 0px;
+				}
+			}
+			.logs:nth-child(3n+2){
+				margin: 0 5%;
+			}
+		}
+	}
+	aside{
+		display: inline-block;
+		width:30%;
+	}
+}
+/*End About Page Section*/
+/*Contact Page Section*/
+.contact-input{
+	width: 100%;
+	padding:5px;
+}
+/*End Contact Page Section*/
