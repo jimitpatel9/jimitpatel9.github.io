@@ -344,6 +344,55 @@ section.abouthead{
 /*Contact Page Section*/
 .contact-input{
 	width: 100%;
-	padding:5px;
+	padding:.6em;
+	margin-top: 5px;
+	border: 1px solid #8C92AC;
+	font-size: .8em;
+
+}
+label{
+	font-weight: 400;
+}
+textarea{
+		height: 30%;
+	}
+.group-input:before,.group-input:after{
+	content: "";
+	display: table;
+}
+.group-input:after{
+	clear: both;
+}
+.group-input p{
+	width: 45%;
+	float: left;
+
+}
+.group-input p:nth-child(3n+2){
+	margin-left: 10%;
+}
+.send{
+
+		color: white;
+	 	font-weight: 400;
+	    font-size: 1.5em;
+	    background-color: #8C92AC;
+	    padding:0.3em 2.5em 0.5em 0.5em;
+	    display: inline-block;
+	    margin-top: 1em;
+	    cursor: pointer;
+	    position: relative;
+	}
+.send::after{
+		  background-image: url("../images/sprites.png");
+  		  background-repeat: no-repeat;
+		  pointer-events: none;
+		  content: "";
+		  position: absolute;
+		  top: 50%;
+		  right: 0.8em;
+		  height: 24px;
+		  width: 24px;
+		  margin-top: -12px;
 }
 /*End Contact Page Section*/
