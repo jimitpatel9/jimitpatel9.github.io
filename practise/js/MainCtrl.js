@@ -9,6 +9,7 @@
 		 		$interval.cancel(countdownInterval);
 		 		$scope.countdown=null;
 		 	}
+		 	$location.path("/user/"+ username);
 		 };
 	 	var decrementCountdown=function(){
 	 		$scope.countdown -=1;

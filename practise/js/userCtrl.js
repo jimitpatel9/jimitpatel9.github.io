@@ -12,8 +12,6 @@
 
 		var onRepos=function(data){
 			$scope.repos=data;
-			$location.hash("userDetails");
-			$anchorScroll();
 		};
 
 		var onError= function(reason){
