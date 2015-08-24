@@ -1,4 +1,5 @@
 (function(){
+	var module = angular.module("githubViewer");
 	var github = function($http){
 
 		var getUser = function(username){
@@ -14,7 +15,7 @@
 						});
 		};
 		var getRepoDetails = function(username,reponame){
-			var repo;
+			var repo=null;
 			var repoUrl="https://api.github.com/repos/" + username + "/" + reponame;
 			return $http.get(repoUrl).then(function(response){
 							repo=response.data;
@@ -35,6 +36,6 @@
 
 
 
-var module = angular.module("githubViewer");
+
 module.factory("github",github);
 }());
