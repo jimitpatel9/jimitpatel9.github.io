@@ -1,6 +1,6 @@
 	// Code goes here
 	(function(){
-var app = angular.module("githubViewer");
+var module = angular.module("githubViewer");
 	
 	var userCtrl=function($scope,github,$routeParams){
 
@@ -22,5 +22,5 @@ var app = angular.module("githubViewer");
 		$scope.username = $routeParams.username;
 		github.getUser($scope.username).then(onUserComplete,onError);
 	};
-	app.controller("userCtrl",userCtrl);
+	module.controller("userCtrl",userCtrl);
 	}());

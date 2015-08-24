@@ -1,7 +1,7 @@
 	// Code goes here
 	(function(){
 
-	var app = angular.module("githubViewer");
+	var module = angular.module("githubViewer");
 	var MainCtrl=function($scope,$interval,$location){
 
 		$scope.search=function(username){
@@ -25,5 +25,5 @@
 		$scope.countdown=5;
 		startCountDown();
 	};
-	app.controller("MainCtrl",MainCtrl);
+	module.controller("MainCtrl",MainCtrl);
 	}());
