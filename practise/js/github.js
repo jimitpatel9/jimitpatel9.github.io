@@ -23,7 +23,7 @@
 						.then(function(response){
 							repo.collaborators=response.data;
 							return repo;
-						})
+						});
 		};
 
 		return{
