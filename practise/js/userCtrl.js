@@ -1,6 +1,6 @@
 	// Code goes here
 	(function(){
-
+var app = angular.module("githubViewer");
 	
 	var userCtrl=function($scope,github,$routeParams){
 
