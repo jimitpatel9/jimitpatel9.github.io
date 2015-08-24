@@ -8,6 +8,10 @@
 				templateUrl:"main.html",
 				controller:"MainCtrl"
 			})
+			.when("/user/:username",{
+				templateUrl:"user.html",
+				controller:"userCtrl"
+			})
 			.otherwise({redirectTo:"/main"});
 	});
 }());
