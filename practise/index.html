@@ -5,7 +5,7 @@
 	</head>
 	<body ng-controller="MainCtrl">
 	<h1>{{message}}</h1>
-	{{error}}
+	{{countdown}}
 	<form ng-submit="search(username)">
 		<input type="search" placeholder="Username to search" ng-model="username">
 		<input type="submit" value="Search" ng-click="search(username)">
@@ -14,8 +14,7 @@
 		<h1>{{user.name}}</h1>
 		<img ng-src="{{user.avatar_url}}">
 	</div>
-	<div ng-include="'userdetails.html'" ng-show="user">
-	</div>
+	<div ng-include ="'userdetails.html'" ng-show="user"></div>
 	<script src="js/angular/angular.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/script.js"></script>
