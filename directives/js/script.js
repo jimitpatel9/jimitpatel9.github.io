@@ -39,7 +39,6 @@ angular.module('app').directive('userInfoCard',function() {
 		restrict:"E",
 		scope:{
 			user : "="
-			initialCollapse : "@collapsed"
 		},
 		controller:function($scope){
 			$scope.collapsed=($scope.initialCollapse==='true');
@@ -67,7 +66,7 @@ angular.module('app').directive('userInfoCard',function() {
 		restrict:"E",
 		templateUrl:"removeFriend.html"
 		controller:function($scope){
-			
+
 		}
 	}
 });*/
