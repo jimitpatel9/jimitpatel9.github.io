@@ -16,11 +16,17 @@ angular.module('app').controller('mainCtrl',function($scope) {
 		]
 
 	};
+	
 });
 angular.module('app').directive('userInfoCard',function() {
 	// body...
 	return{
 		templateUrl:"userInfoCard.html",
-		restrict:"E"
+		restrict:"E",
+		controller:function($scope){
+			$scope.knightMe=function(user){
+				user.rank="knight";
+			}
+		}
 	};
 });
