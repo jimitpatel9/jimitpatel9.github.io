@@ -3,7 +3,8 @@ angular.module('app',[]);
 angular.module('app').controller('mainCtrl',function($scope) {
 	// body...
 	$scope.user1={
-		name:'Jimit'
+		name:'Jimit',
+		selected:false
 	}
 });
 angular.module('app').directive('userTile',function(){
@@ -12,7 +13,12 @@ angular.module('app').directive('userTile',function(){
 		scope:{
 			user:"="
 		},
-		templateUrl:"userTile.html"
+		templateUrl:"userTile.html",
+		controller:function($scope){
+			$scope.select=function(){
+				$scope.selected=!$scope.selected;
+			}
+		}
 		
 	}
 });
