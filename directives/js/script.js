@@ -48,7 +48,12 @@ angular.module('app').directive('userInfoCard',function() {
 			$scope.collapse=function(){
 				$scope.collapsed=!$scope.collapsed;
 			}
-			
+			$scope.removeFriend=function(friend){
+				var idx=$scope.user.friend.indexOf(friend);
+				if (idx>-1) {
+					$scope.user.friend.splice(idx,1);
+				};
+			}
 		}
 	};
 });
@@ -56,16 +61,16 @@ angular.module('app').directive('removeFriend',function(){
 	return{
 		restrict:"E",
 		templateUrl:"removeFriend.html",
+		scope:{
+			notifyParent:"&method"
+		},
 		controller:function($scope){
 			$scope.removing=false;
 			$scope.startRemove=function(){
 				$scope.removing=true;
 			}
-			$scope.removeFriend=function(friend){
-				var idx=$scope.user.friend.indexOf(friend);
-				if (idx>-1) {
-					$scope.user.friend.splice(idx,1);
-				};
+			$scope.confirmRemove=function(){
+				$scope.notifyParent();
 			}
 		}
 	}
