@@ -55,7 +55,7 @@ angular.module('app').directive('userInfoCard',function() {
 angular.module('app').directive('removeFriend',function(){
 	return{
 		restrict:"E",
-		templateUrl:"removeFriend.html"
+		templateUrl:"removeFriend.html",
 		controller:function($scope){
 			$scope.removing=false;
 			$scope.startRemove=function(){
