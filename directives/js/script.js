@@ -37,9 +37,7 @@ angular.module('app').directive('userInfoCard',function() {
 	return{
 		templateUrl:"userInfoCard.html",
 		restrict:"E",
-		scope:{
-			user : "="
-		},
+		
 		controller:function($scope){
 			$scope.collapsed=true;
 			$scope.knightMe=function(user){
