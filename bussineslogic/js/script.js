@@ -16,7 +16,7 @@ angular.module('app').directive('userTile',function(){
 		templateUrl:"userTile.html",
 		controller:function($scope){
 			$scope.select=function(){
-				$scope.selected=!$scope.selected;
+				$scope.user.selected=!$scope.user.selected;
 			}
 		}
 		
