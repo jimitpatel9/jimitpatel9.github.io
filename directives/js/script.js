@@ -55,6 +55,7 @@ angular.module('app').directive('userInfoCard',function() {
 return{
 	templateUrl:"address.html",
 	restrict:"E",
+	scope:true,
 	controller:function($scope){
 		$scope.collapsed=false;
 		$scope.collapseAddress=function(){
