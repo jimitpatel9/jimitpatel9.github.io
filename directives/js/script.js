@@ -39,7 +39,7 @@ angular.module('app').directive('userInfoCard',function() {
 		restrict:"E",
 		scope:{
 			user : "="
-		}
+		},
 		controller:function($scope){
 			$scope.knightMe=function(user){
 				user.rank="knight";
