@@ -51,3 +51,19 @@ angular.module('app').directive('userInfoCard',function() {
 		}
 	};
 });
+angular.module('app').directive('userInfoCard',function() {
+return{
+	templateUrl:"address.html",
+	restrict:"E",
+	controller:function($scope){
+		$scope.collapsed=false;
+		$scope.collapseAddress=function(){
+			$scope.collapsed=true;
+		}
+		$scope.cexpandAddress=function(){
+			$scope.collapsed=true;
+		}
+	}
+}
+
+});
