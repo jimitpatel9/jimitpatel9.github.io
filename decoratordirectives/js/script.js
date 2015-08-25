@@ -4,20 +4,20 @@ angular.module('app').controller('mainCtrl',function($scope) {
 	// body...
 	$scope.messages=[];
 
-	$scope.handlePause=function(){
+	$scope.handlePause=function(e){
 		$scope.messages.push({text:'paused!'});
 		console.log('paused!');
 	}
 	
 });
-angular.module('app').directive('eventPause',function(){
+angular.module('app').directive('eventPause',function($parse){
 	return{
 		restrict:"A",
 		link:function(scope,el,attrs){
-			vr fn=$parse(attrs['handlePause']);
+			var fn=$parse(attrs['eventPause']);
 			el.on('pause',function(event){
 				scope.$apply(function(){
-					scope.fn();
+					fn(scope,{evt:event});
 				})
 			})
 		}
