@@ -1,6 +1,6 @@
 <div class="panel panel-primary">
-	<div class="panel-heading">{{user.name}}</div> 
-	<div class="panel-body">
+	<div class="panel-heading" ng-click="collapse">{{user.name}}</div> 
+	<div class="panel-body" ng-show="collapsed">
 		<div ng-show='user.address'>
 			<h4>Address:</h4> <br/>
 		{{user.address.street}}<br/>
