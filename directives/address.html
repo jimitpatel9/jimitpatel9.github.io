@@ -3,7 +3,7 @@
 	{{user.address.street}}<br/>
 	{{user.address.city}}<br/>
 </div>
-<div ng-show='user.address $$ collapsed'ng-click="expandAddress()">
+<div ng-hide='!user.address $$ collapsed'ng-click="expandAddress()">
 	<h4>Address:</h4> <br/>
 	{{user.address.planet}}..
 </div>
