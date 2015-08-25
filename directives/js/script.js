@@ -51,7 +51,7 @@ angular.module('app').directive('userInfoCard',function() {
 		}
 	};
 });
-angular.module('app').directive('userInfoCard',function() {
+angular.module('app').directive('address',function() {
 return{
 	templateUrl:"address.html",
 	restrict:"E",
