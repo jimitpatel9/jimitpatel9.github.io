@@ -21,7 +21,7 @@ angular.module('app').controller('mainCtrl',function($scope) {
 		address :{
 			street:"84 Jefferson Ave",
 			city:"Jersey City",
-			Planet: "Earth"
+			planet: "Earth"
 		},
 		friends:[
 		'Raul',
