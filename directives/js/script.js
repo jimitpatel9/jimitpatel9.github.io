@@ -49,15 +49,6 @@ angular.module('app').directive('userInfoCard',function() {
 			$scope.collapse=function(){
 				$scope.collapsed=!$scope.collapsed;
 			}
-			
-		}
-	};
-});
-angular.module('app').directive('removeFriend',function(){
-	return{
-		restrict:"E",
-		templateUrl:"removeFriend.html"
-		controller:function($scope){
 			$scope.removing=false;
 			$scope.startRemove=function(){
 				$scope.removing=true;
@@ -69,8 +60,17 @@ angular.module('app').directive('removeFriend',function(){
 				};
 			}
 		}
-	}
+	};
 });
+/*angular.module('app').directive('removeFriend',function(){
+	return{
+		restrict:"E",
+		templateUrl:"removeFriend.html"
+		controller:function($scope){
+			
+		}
+	}
+});*/
 angular.module('app').directive('address',function() {
 return{
 	templateUrl:"address.html",
