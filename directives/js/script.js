@@ -2,7 +2,7 @@ angular.module('app',[]);
 
 angular.module('app').controller('mainCtrl',function($scope) {
 	// body...
-	$scope.user = { 
+	$scope.user1 = { 
 		name:"Jimit Patel",
 		address :{
 			street:"83 Jefferson Ave",
@@ -23,6 +23,9 @@ angular.module('app').directive('userInfoCard',function() {
 	return{
 		templateUrl:"userInfoCard.html",
 		restrict:"E",
+		scope:{
+			user : "="
+		}
 		controller:function($scope){
 			$scope.knightMe=function(user){
 				user.rank="knight";
