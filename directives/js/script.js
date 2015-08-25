@@ -61,7 +61,7 @@ return{
 			$scope.collapsed=true;
 		}
 		$scope.cexpandAddress=function(){
-			$scope.collapsed=true;
+			$scope.collapsed=false;
 		}
 	}
 }
