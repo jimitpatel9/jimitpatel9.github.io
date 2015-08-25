@@ -41,7 +41,7 @@ angular.module('app').directive('userInfoCard',function() {
 			user : "="
 		},
 		controller:function($scope){
-			$scope.collapsed=($scope.initialCollapse==='true');
+			$scope.collapsed=false;
 			$scope.knightMe=function(user){
 				user.rank="knight";
 			}
