@@ -16,6 +16,20 @@ angular.module('app').controller('mainCtrl',function($scope) {
 		]
 
 	};
+	$scope.user2 = { 
+		name:"Jim Patel",
+		address :{
+			street:"84 Jefferson Ave",
+			city:"Jersey City",
+			Planet: "Earth"
+		},
+		friends:[
+		'Raul',
+		'Rinay',
+		'Ram'
+		]
+
+	};
 	
 });
 angular.module('app').directive('userInfoCard',function() {
