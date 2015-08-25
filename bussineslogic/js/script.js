@@ -12,7 +12,7 @@ angular.module('app').directive('userTile',function(){
 		scope:{
 			user:"="
 		},
-		template:"userTile.html"
+		templateUrl:"userTile.html"
 		
 	}
 });
