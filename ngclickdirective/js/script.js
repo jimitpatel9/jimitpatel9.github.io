@@ -4,7 +4,7 @@ angular.module('app').controller('mainCtrl',function($scope) {
 	// body...
 	$scope.data={message:"I am not clicked"};
 	$scope.clickHandler=function(p){
-		p.message="i am clicked";
+		p.message="I am clicked";
 	}
 });
 angular.module('app').directive('myClick',function($parse){
