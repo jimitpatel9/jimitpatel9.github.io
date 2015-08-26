@@ -10,11 +10,13 @@ angular.module('app').controller('mainCtrl',function($scope) {
 angular.module('app').directive('userTile',function(){
 	return{
 		restrict:"E",
-		scope:true,
+		scope:{
+			user:"="
+		},
 		templateUrl:"userTile.html",
 		controller:function($scope){
 			$scope.select=function(){
-				$scope.user1.selected=!$scope.user1.selected;
+				$scope.user.selected=!$scope.user.selected;
 			}
 		}
 		
