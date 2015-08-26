@@ -13,7 +13,8 @@ angular.module('app').controller('mainCtrl',function($scope) {
 		'Rahul',
 		'Rinay',
 		'Ram'
-		]
+		],
+		level:0;
 
 	};
 	$scope.user2 = { 
@@ -27,7 +28,8 @@ angular.module('app').controller('mainCtrl',function($scope) {
 		'Raul',
 		'Rinay',
 		'Ram'
-		]
+		],
+		level:1;
 
 	};
 	
@@ -56,6 +58,23 @@ angular.module('app').directive('userInfoCard',function() {
 		restrict:"E",
 		scope:{
 			user : "="
+		},
+		link:function(scope,el,attrs){
+			scope.nextState=function(){
+				scope.user.level++;
+				scope.user.level=scope.user.level % 3;
+				switch(scope.user.level){
+					case 0:
+					el.find('.panel-body').css('background-color','white');
+					break;
+					case 1:
+					el.find('.panel-body').css('background-color','yellow');
+					break;
+					case 2:
+					el.find('.panel-body').css('background-color','red');
+					break;
+				}
+			}
 		},
 		controller:function($scope){
 			$scope.collapsed=true;
