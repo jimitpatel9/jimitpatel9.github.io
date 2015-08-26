@@ -14,7 +14,7 @@ angular.module('app').controller('mainCtrl',function($scope) {
 		'Rinay',
 		'Ram'
 		],
-		level:0;
+		level:0
 
 	};
 	$scope.user2 = { 
