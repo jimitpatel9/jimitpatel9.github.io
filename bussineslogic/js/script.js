@@ -10,9 +10,7 @@ angular.module('app').controller('mainCtrl',function($scope) {
 angular.module('app').directive('userTile',function(){
 	return{
 		restrict:"E",
-		scope:{
-			user:"="
-		},
+		scope:true,
 		templateUrl:"userTile.html",
 		controller:function($scope){
 			$scope.select=function(){
