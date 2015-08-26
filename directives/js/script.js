@@ -65,9 +65,9 @@ return{
 					break;
 				}
 	
-	})
+	});
 }
-});
+}
 });
 angular.module('app').directive('userInfoCard',function() {
 	// body...
