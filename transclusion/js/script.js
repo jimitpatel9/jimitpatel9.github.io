@@ -20,7 +20,7 @@ angular.module('app').directive('displayBox',function(){
 			$scope.message="I'm Hijacking";
 			console.log('directive',$scope);
 		},
-		transclude:true,
+		
 		scope:true
 		}
 });
