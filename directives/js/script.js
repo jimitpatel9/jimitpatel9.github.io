@@ -49,6 +49,7 @@ return{
 		}
 	}
 }
+});
 angular.module('app').directive('stateDisplay',function(){
 return{
 	link:function(scope,el,attrs){
