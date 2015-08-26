@@ -10,7 +10,7 @@ angular.module('app').directive('displayBox',function(){
 		templateUrl:"displayBox.html",
 		controller:function($scope){
 			$scope.hidden =false;
-			$scope.clos=function(){
+			$scope.close=function(){
 				$scope.hidden=true;
 			}
 		},
