@@ -2,7 +2,11 @@ angular.module('app',[]);
 
 angular.module('app').controller('mainCtrl',function($scope) {
 	// body...
-	$scope.message="This Is message"
+	$scope.message="This Is message";
+	console.log('controller',$scope);
+});
+angular.module('app').controller('innerCtrl',function(){
+ console.log('innerCtrl',$scope);
 });
 angular.module('app').directive('displayBox',function(){
 	return{
@@ -13,9 +17,11 @@ angular.module('app').directive('displayBox',function(){
 			$scope.close=function(){
 				$scope.hidden=true;
 			}
-			$scope.message="I'm Hijacking"
+			$scope.message="I'm Hijacking";
+			console.log('directive',$scope);
 		},
-		transclude:true
+		transclude:true,
+		scope:true
 		}
 });
 

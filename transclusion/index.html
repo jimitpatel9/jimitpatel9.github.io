@@ -7,12 +7,14 @@
 	</head>
 	<body ng-controller="mainCtrl" class="container">
 	<display-box>
+		<div ng-controller="innerCtrl">
 		<div>This is content inside</div>
 		<ul>
 			<li>Item 1</li>
 			<li>Item 2</li>
 		</ul>
 		<div>{{message}}</div>
+		</div>
 	</display-box>
 		
 		
