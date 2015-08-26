@@ -96,7 +96,7 @@ angular.module('app').directive('userInfoCard',function() {
 				$scope.user.level=$scope.user.level % 3;	
 			}
 		}
-	};
+	}
 });
 angular.module('app').directive('removeFriend',function(){
 	return{
