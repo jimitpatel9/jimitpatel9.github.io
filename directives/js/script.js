@@ -29,7 +29,7 @@ angular.module('app').controller('mainCtrl',function($scope) {
 		'Rinay',
 		'Ram'
 		],
-		level:1;
+		level:1
 
 	};
 	
