@@ -13,8 +13,9 @@ angular.module('app').directive('displayBox',function(){
 			$scope.close=function(){
 				$scope.hidden=true;
 			}
+			$scope.message="I'm Hijacking"
 		},
-		
+		transclude:true
 		}
 });
 
