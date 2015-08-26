@@ -5,7 +5,7 @@
 <div>
 	<ul>
 		<li ng-repeat="user in repo.collaborators">
-			<img src="user.avatar_url}}">
+			<img ng-src="{{user.avatar_url}}">
 			{{user.login}}
 		</li>
 	</ul>
