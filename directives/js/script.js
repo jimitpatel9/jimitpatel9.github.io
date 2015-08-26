@@ -78,6 +78,7 @@ angular.module('app').directive('userInfoCard',function() {
 					break;
 				}
 			}
+			setState();
 
 		},
 		controller:function($scope){
