@@ -53,19 +53,11 @@ return{
 angular.module('app').directive('stateDisplay',function(){
 return{
 	link:function(scope,el,attrs){
-		scope.$watch(attrs['stateDisplay'],function(newVal){
-		switch(newVal){
-					case 0:
-					el.css('background-color','white');
-					break;
-					case 1:
-					el.css('background-color','yellow');
-					break;
-					case 2:
-					el.css('background-color','red');
-					break;
-				}
-	
+		var params=attrs['stateDisplay'].split(' ');
+		var linkVar=params[0];
+		scope.$watch(linkVar,function(newVal){
+			el.removeClass(params.join(' '));
+			el.addclass(params[newVal+1]);	
 	});
 }
 }

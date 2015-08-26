@@ -1,0 +1,12 @@
+.user-ok{
+
+}
+.user-problem{
+	color: yellow;
+}
+.user-warning{
+	color: orange;
+}
+.user-error{
+color:red;
+}
