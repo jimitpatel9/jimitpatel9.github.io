@@ -2,7 +2,7 @@ angular.module('app',[]);
 
 angular.module('app').controller('mainCtrl',function($scope) {
 	// body...
-	$scope.baseLocation="jimit";
+	$scope.answer={baseLocation:"jimit"};
 });
 angular.module('app').directive('myQuestion',function(){
 	return{
