@@ -57,7 +57,7 @@ return{
 		var linkVar=params[0];
 		scope.$watch(linkVar,function(newVal){
 			el.removeClass(params.join(' '));
-			el.addclass(params[newVal+1]);	
+			el.addClass(params[newVal+1]);	
 	});
 }
 }
