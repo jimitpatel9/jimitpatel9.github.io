@@ -14,7 +14,7 @@ angular.module('app').directive('displayBox',function(){
 				$scope.hidden=true;
 			}
 		},
-		transclude:true
+		
 		}
 });
 
