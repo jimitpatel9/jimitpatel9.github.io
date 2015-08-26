@@ -63,6 +63,9 @@ angular.module('app').directive('userInfoCard',function() {
 			scope.nextState=function(){
 				scope.user.level++;
 				scope.user.level=scope.user.level % 3;
+				setState();
+			}
+			function setState(){
 				switch(scope.user.level){
 					case 0:
 					el.find('.panel-body').css('background-color','white');
@@ -75,6 +78,7 @@ angular.module('app').directive('userInfoCard',function() {
 					break;
 				}
 			}
+
 		},
 		controller:function($scope){
 			$scope.collapsed=true;
