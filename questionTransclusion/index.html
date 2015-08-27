@@ -6,7 +6,18 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 	<body ng-controller="mainCtrl" class="container">
-		
+		<h1>Questions</h1>
+		<my-question q="Where is the rebel base?">
+			<input type="text" ng-model="answere.baseLocation">
+		</my-question>
+		<my-question q="Are you my brother?">
+			<input type="radio" ng-value="true" ng-model="answere.brother" /> Yes
+			<input type="radio" ng-value="false" ng-model="answere.brother" /> No
+		</my-question>
+		<my-question q="Are these Droids I am looking for?">
+			<button class="btn btn-lg btn-primary">No</button>
+			<button class="btn btn-lg btn-default">Yes</button>
+		</my-question>
 		
 		
 
@@ -21,8 +32,8 @@
 		<script src="js/app/app.js"></script>
 		<script src="js/routers/mainRoute.js"></script>
 		<script src="js/services/mainService.js"></script>
-		<script src="js/directives/displayBox.js"></script>
+		<script src="js/directives/myQuestion.js"></script>
 		<script src="js/controllers/mainCtrl.js"></script>
-		<script src="js/controllers/innerCtrl.js"></script>
+
 	</body>
 </html>

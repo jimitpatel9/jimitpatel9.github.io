@@ -3,8 +3,8 @@
 var app=angular.module('app');
 // body...
 var mainCtrl=function($scope){
-	$scope.message="This Is message";
-	console.log('controller',$scope);
+	$scope.answere={baseLocation:"Jimit"};
+	
 };
 
 

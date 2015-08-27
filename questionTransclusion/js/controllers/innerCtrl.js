@@ -3,7 +3,8 @@
 var app=angular.module('app');
 // body...
 var innerCtrl=function($scope){
-	console.log('innerCtrl',$scope);
+	
+	console.log('innercontroller',$scope);
 };
 
 
