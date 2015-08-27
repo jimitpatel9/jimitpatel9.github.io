@@ -7,12 +7,7 @@ var userInfoData=function(){
 		restrict:'E',
 		templateUrl:"userInfoData.html",
 		scope:{user:"="},
-		controller:function($scope){
-			$scope.collapsed=true;
-			$scope.collapse=function(){
-				$scope.collapsed=!$scope.collapsed;
-			}
-		}
+		
 	}
 };
 

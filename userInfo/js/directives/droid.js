@@ -7,12 +7,7 @@ var droid=function(){
 		restrict:'E',
 		templateUrl:"droid.html",
 		scope:{user:"="},
-		controller:function($scope){
-			$scope.collapsed=true;
-			$scope.collapse=function(){
-				$scope.collapsed=!$scope.collapsed;
-			}
-		}
+		
 	}
 };
 

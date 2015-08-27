@@ -1,11 +1,7 @@
-<div class="panel panel-primary">
-	<div class="panel-heading" ng-click="collapse()"><h4>{{user.name}}</h4></div>
-	<div class="panel-body" ng-show="collapsed">
-		<div>
-			<h3>Specification : </h3>
-			{{user.specification.version}}<br>
-			{{user.specification.speed}}
-		</div>
-		
+<user-panel user="user">
+	<div>
+		<h3>Specification : </h3>
+		{{user.specification.version}}<br>
+		{{user.specification.speed}}
 	</div>
-</div>
+</user-panel>
