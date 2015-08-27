@@ -1,0 +1,10 @@
+<div ng-click="collapse()">
+	<h3>Address:</h3>
+</div>
+<div ng-show="collapsed">
+	{{user.address.street}}<br>
+	{{user.address.city}}
+</div>
+<div ng-hide="collapsed">
+	{{user.address.planet}}
+</div>

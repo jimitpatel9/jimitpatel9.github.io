@@ -2,10 +2,10 @@
 	
 var app=angular.module('app');
 // body...
-var userInfoData=function(){
+var droid=function(){
 	return{
 		restrict:'E',
-		templateUrl:"userInfoData.html",
+		templateUrl:"droid.html",
 		scope:{user:"="},
 		controller:function($scope){
 			$scope.collapsed=true;
@@ -18,6 +18,6 @@ var userInfoData=function(){
 
 
 
-app.directive('userInfoData',userInfoData);
+app.directive('droid',droid);
 	
 })();

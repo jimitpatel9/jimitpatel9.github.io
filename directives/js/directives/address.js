@@ -18,9 +18,6 @@ var address=function(){
 		}
 	}
 };
-
-
-
 app.directive('address',address);
 	
 })();

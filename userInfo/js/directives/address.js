@@ -2,11 +2,11 @@
 	
 var app=angular.module('app');
 // body...
-var userInfoData=function(){
+var address=function(){
 	return{
 		restrict:'E',
-		templateUrl:"userInfoData.html",
-		scope:{user:"="},
+		templateUrl:"address.html",
+		scope:true,
 		controller:function($scope){
 			$scope.collapsed=true;
 			$scope.collapse=function(){
@@ -18,6 +18,6 @@ var userInfoData=function(){
 
 
 
-app.directive('userInfoData',userInfoData);
+app.directive('address',address);
 	
 })();
