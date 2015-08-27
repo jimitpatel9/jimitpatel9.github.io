@@ -2,15 +2,14 @@ angular.module('app',[]);
 
 angular.module('app').controller('mainCtrl',function($scope) {
 	// body...
-	$scope.baseLocation="jimit";
+	$scope.items=[1,3,6,7];
 });
-angular.module('app').directive('myQuestion',function(){
+angular.module('app').directive('myTransclude',function(){
 	return{
 		restrict:'E',
-		transclude:true,
-		templateUrl:'myQuestion.html',
-		scope:true
+		trasclude:true,
+		template:'<div ng-transclude />'
+		
 	}
 });
-
 
