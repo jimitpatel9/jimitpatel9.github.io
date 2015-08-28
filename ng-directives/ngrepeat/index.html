@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>AngularJs</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+	<body ng-controller="mainCtrl" class="container">
+		<h1 class="well">Bounty Hunters</h1>
+		<div my-repeat="hunter in bountyhunters">
+			<span> Age: {{hunter.age}}</span>
+		</div>
+		<hr>
+		<button class="btn btn-primary" ng-click="add()">Add</button>
+		<button class="btn btn-primary" ng-click="remove()">Remove</button>
+		
+		
+
+
+
+
+
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/angular/angular.js"></script>
+		<script src="js/angular/angular-route.min.js"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/app/app.js"></script>
+		<!-- <script src="js/routers/mainRoute.js"></script>
+		<script src="js/services/mainService.js"></script> -->
+		<script src="js/directives/myrepeat.js"></script>
+		<script src="js/controllers/mainCtrl.js"></script>
+		
+	</body>
+</html>

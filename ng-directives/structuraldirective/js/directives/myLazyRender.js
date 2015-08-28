@@ -16,10 +16,9 @@ var myLazyRender=function(){
 					transclude(scope,function(clone){
 						el.after(clone);
 					});
-					watchfn();
 				}
 			});
-			
+			watchfn();
 			
 		}
 	}
