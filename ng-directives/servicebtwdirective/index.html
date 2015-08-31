@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>AngularJs</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+	<body ng-controller="mainCtrl" class="container">
+		<h1>User List</h1>
+		<div class="row">
+			<div class="col-xs-4">
+				<master-users data="users" >
+				</master-users>
+			</div>
+			<div class="col-xs-8">
+				<detail-users data="users" >
+				</detail-users>
+			</div>
+		</div>
+		
+		
+
+
+
+
+
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/angular/angular.js"></script>
+		<script src="js/angular/angular-route.min.js"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/app/app.js"></script>
+		<script src="js/routers/mainRoute.js"></script>
+		<script src="js/services/mainService.js"></script>
+		<script src="js/directives/masterUsers.js"></script>
+		<script src="js/directives/detailUsers.js"></script>
+		<script src="js/controllers/mainCtrl.js"></script>
+	</body>
+</html>

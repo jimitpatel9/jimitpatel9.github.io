@@ -15,7 +15,6 @@ var modal=function($document){
 		controller:function($scope){
 			$scope.close=function(){
 				$scope.modalOpen=false;
-				console.log('hello');
 				$scope.onClose();
 			}
 		},
