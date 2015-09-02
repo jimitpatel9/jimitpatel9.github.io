@@ -1,0 +1,12 @@
+<header class="header">
+	<span class="logo"><img ng-src="images/logo.jpg"></span>
+	<p>Welcome {{username}}..</p>
+</header>
+<ul class="itemList" >
+	<li ng-repeat="item in itemList">
+		<img ng-src="{{item.img}}"/>
+		<p>{{item.name}}<br>{{item.price}}</p>
+		<button class="btn btn-warning" ng-model="add" ng-click="">Add To Cart</button>
+	</li>
+	<div class="clear"></div>
+</ul>

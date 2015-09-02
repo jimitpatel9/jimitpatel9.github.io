@@ -1,0 +1,59 @@
+/*Mixins*/
+/*End Mixins*/
+/*Variables*/
+/*End Variables*/
+/*General Classess*/
+.clear {
+  clear: both; }
+
+/*End General Classess*/
+body {
+  background-color: #0B0B48;
+  width: 420px;
+  margin: 0 auto; }
+
+.login p {
+  text-align: center; }
+  .login p input[type=text], .login p input[type=password], .login p input {
+    padding-left: 10px;
+    color: black;
+    width: 80%;
+    height: 40px; }
+.login div {
+  text-align: center;
+  color: red;
+  margin: 5px; }
+  .login div button {
+    width: 100px;
+    margin-left: 10px; }
+
+.logo {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 10px auto; }
+  .logo img {
+    width: 100%; }
+
+.header {
+  color: white; }
+  .header p {
+    margin-left: 30px; }
+
+.itemList {
+  display: block;
+  width: 100%;
+  padding: 0;
+  height: auto;
+  clear: both; }
+  .itemList li {
+    display: block;
+    float: left;
+    width: 150px;
+    margin-left: 30px;
+    color: white;
+    text-align: center; }
+    .itemList li img {
+      width: 100%; }
+
+/*# sourceMappingURL=main.css.map */
