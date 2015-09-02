@@ -6,11 +6,11 @@
 
 		$stateProvider
 			.state('login',{
-				url:'/login',
+				url:'',
 				templateUrl:'login.html',
 				controller:'loginCtrl'
 			});
-			//$urlRouterProvider.otherwise({redirectTo:'/login'});
+			//$urlRouterProvider.otherwise({redirectTo:''});
 	}
 	app.run(['$state',function($state){
 

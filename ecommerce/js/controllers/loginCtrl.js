@@ -13,15 +13,10 @@ var loginCtrl=function($scope,$location,$routeParams){
 		password:'demo',
 		email:'demo@demo'
 	}];
-	console.log('login',$scope);
-	var obj=$scope.user[0];
-	obj.username=$routeParams.username;
-	obj.password=$routeParams.password;
-	obj.email=$routeParams.email
-	$scope.user.push(obj);
+
 	$scope.validateLogin=function(){
 		var tracker=false;
-		console.log(obj);
+		
 		for(var i=0;i<$scope.user.length;i++){
 			if($scope.user[i].username===$scope.username && 
 				$scope.user[i].password===$scope.password){

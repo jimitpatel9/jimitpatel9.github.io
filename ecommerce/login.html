@@ -1,14 +1,16 @@
 <div class="login">
 	<span class="logo"><img ng-src="images/logo.jpg"></span>
-	<div ng-show="error">{{error}}</div>
-	<p>
-		<input ng-model="username" type="text" placeholder="Username"/>
-	</p>
-	<p>
-		<input ng-model="password" type="password" placeholder="Password"/>
-	</p>
-	<div>
-		<button class="btn btn-info" ng-click="validateLogin()">Login</button>
-		<button class="btn btn-info" ng-click="signupform()">Sign-Up</button>
-	</div>
+	<form>
+		<div ng-show="error">{{error}}</div>
+		<p>
+			<input ng-model="username" type="text" placeholder="Username" required/>
+		</p>
+		<p>
+			<input ng-model="password" type="password" placeholder="Password" required/>
+		</p>
+		<div>
+			<button class="btn btn-info" ng-click="validateLogin()">Login</button>
+			<button class="btn btn-info" ng-click="signupform()">Sign-Up</button>
+		</div>
+	</form>
 </div>
