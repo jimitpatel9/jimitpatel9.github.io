@@ -9,13 +9,25 @@
 				name:'Pen',
 				price:4.00,
 				qty:1,
-				img:'images/item/pen.jpg'
+				img:'images/item/pen.png'
 			},
 			{
 				name:'Pencil',
 				price:3.00,
 				qty:1,
-				img:'images/item/pencil.jpg'
+				img:'images/item/pencil.png'
+			},
+			{
+				name:'Eraser',
+				price:3.00,
+				qty:1,
+				img:'images/item/eraser.png'
+			},
+			{
+				name:'Compass Box',
+				price:10.00,
+				qty:1,
+				img:'images/item/compass.jpg'
 			}];
 		
 

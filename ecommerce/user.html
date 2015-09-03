@@ -6,7 +6,7 @@
 <ul class="itemList" >
 
 	<li ng-repeat="item in itemList.iteminfo">
-		<img ng-src="{{item.img}}"/><br><br>
+		<img ng-src="{{item.img}}"/><br>
 		<p>{{item.name}}<br>$ {{item.price}}</p>
 		<label>Qty</label>
 		<input ng-model="item.qty" type="number" placeholder="0"/>
