@@ -2,18 +2,16 @@
 	
 var app=angular.module('app');
 // body...
-var userCtrl=function($scope,$stateParams){
+var userCtrl=function($scope,$stateParams,$state,orderdata){
 	$scope.username=$stateParams.username;
-	$scope.itemList=[{
-		name:'Pen',
-		price:'$4.00',
-		img:'images/item/pen.jpg'
-	},
-	{
-		name:'Pencil',
-		price:'$3.00',
-		img:'images/item/pencil.jpg'
-	}]
+    $scope.itemList=orderdata;
+	$scope.add=function(index,qty){
+		$scope.itemList.iteminfo[index].qty=qty;
+		$scope.itemList.cartItem.push($scope.itemList.iteminfo[index]);
+		$state.go('orderPage',{username:$scope.username});
+		
+	}
+	
 };
 
 

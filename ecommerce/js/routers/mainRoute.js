@@ -19,6 +19,11 @@
 				url:'/userdetail',
 				templateUrl:"userdetail.html",
 				controller:"userDetail"
+			})
+			.state("orderPage",{
+				url:'/:username/order',
+				templateUrl:"order.html",
+				controller:"orderCtrl"
 			});
 			//$urlRouterProvider.otherwise({redirectTo:''});
 	}

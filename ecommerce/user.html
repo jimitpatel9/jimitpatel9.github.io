@@ -2,11 +2,15 @@
 	<span class="logo" ui-sref="login"><img ng-src="images/logo.jpg"></span>
 	<p>Welcome {{username}}..</p>
 </header>
+
 <ul class="itemList" >
-	<li ng-repeat="item in itemList">
-		<img ng-src="{{item.img}}"/>
-		<p>{{item.name}}<br>{{item.price}}</p>
-		<button class="btn btn-warning" ng-model="add" ng-click="">Add To Cart</button>
+
+	<li ng-repeat="item in itemList.iteminfo">
+		<img ng-src="{{item.img}}"/><br><br>
+		<p>{{item.name}}<br>$ {{item.price}}</p>
+		<label>Qty</label>
+		<input ng-model="item.qty" type="number" placeholder="0"/>
+		<button class="btn btn-warning"  ng-click="add($index,item.qty)">Add To Cart</button>
 	</li>
 	<div class="clear"></div>
 </ul>
