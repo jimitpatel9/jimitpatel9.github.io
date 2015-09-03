@@ -2,30 +2,23 @@
 	
 var app=angular.module('app');
 // body...
-var loginCtrl=function($scope,$location,$routeParams){
-	$scope.user=[{
-		username:'jimit',
-		password:'jimit',
-		email:'jimit@jimit'
-	},
-	{
-		username:'demo',
-		password:'demo',
-		email:'demo@demo'
-	}];
-
+var loginCtrl=function($scope,userdata,$rootScope){
+	var userinfo=userdata;
+	
+	$scope.closeAlert = function() {
+	    $scope.alert=null;
+	  };
 	$scope.validateLogin=function(){
 		var tracker=false;
-		
-		for(var i=0;i<$scope.user.length;i++){
-			if($scope.user[i].username===$scope.username && 
-				$scope.user[i].password===$scope.password){
+		for(var i=0;i<userinfo.userdata.length;i++){
+			if(userinfo.userdata[i].username===$scope.username && 
+				userinfo.userdata[i].password===$scope.password){
 				
 				tracker=true;
 			}
 		}
 		if(tracker===true){
-			$location.path('/user/'+ $scope.username);
+			
 			$scope.error=false;
 		}
 		else{
@@ -33,9 +26,15 @@ var loginCtrl=function($scope,$location,$routeParams){
 
 		}
 	};
-	$scope.signupform=function(){
-		$location.path('/userdetail');
-	}
+	$rootScope.$on('$stateChangeStart', 
+		function(event, toState, toParams, fromState, fromParams){ 
+		    if(fromState==='userdetail') {
+		    	$scope.alert='Welcome to Online Shopping App !';
+		    }
+		    // transitionTo() promise will be rejected with 
+		    // a 'transition prevented' error
+		})
+	
 };
 
 

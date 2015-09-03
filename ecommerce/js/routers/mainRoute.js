@@ -1,4 +1,4 @@
-/*(function  () {
+(function  () {
 	// body...
 	var app = angular.module('app');
 	app.config(['$stateProvider','$urlRouterProvider',configRoutes]);
@@ -9,14 +9,24 @@
 				url:'',
 				templateUrl:'login.html',
 				controller:'loginCtrl'
+			})
+			.state("displayProducts",{
+				url:"/user/:username",
+				templateUrl:"user.html",
+				controller:"userCtrl"
+			})
+			.state("userdetail",{
+				url:'/userdetail',
+				templateUrl:"userdetail.html",
+				controller:"userDetail"
 			});
 			//$urlRouterProvider.otherwise({redirectTo:''});
 	}
 	app.run(['$state',function($state){
 
 	}]);
-}());*/
-(function  () {
+}());
+/*(function  () {
 	// body...
 	var app = angular.module("app");
 	app.config(function($routeProvider){
@@ -34,4 +44,4 @@
 			})
 			.otherwise({redirectTo:"/login"});
 	});
-}());
+}());*/

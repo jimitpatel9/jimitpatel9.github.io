@@ -2,9 +2,8 @@
 	
 var app=angular.module('app');
 // body...
-var userCtrl=function($scope,$routeParams){
-	$scope.username=$routeParams.username;
-	console.log('userCtrl',$scope);
+var userCtrl=function($scope,$stateParams){
+	$scope.username=$stateParams.username;
 	$scope.itemList=[{
 		name:'Pen',
 		price:'$4.00',

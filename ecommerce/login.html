@@ -1,7 +1,8 @@
 <div class="login">
-	<span class="logo"><img ng-src="images/logo.jpg"></span>
+	<span class="logo" ui-sref="login"><img ng-src="images/logo.jpg"></span>
 	<form>
 		<div ng-show="error">{{error}}</div>
+		<alert type="{{alert.type}}" close="closeAlert()" ng-show="alert">{{alert}}</alert>
 		<p>
 			<input ng-model="username" type="text" placeholder="Username" required/>
 		</p>
@@ -9,8 +10,9 @@
 			<input ng-model="password" type="password" placeholder="Password" required/>
 		</p>
 		<div>
-			<button class="btn btn-info" ng-click="validateLogin()">Login</button>
-			<button class="btn btn-info" ng-click="signupform()">Sign-Up</button>
+			<button class="btn btn-info" ng-click="validateLogin()" ui-sref="displayProducts({username:username})">Login</button>
+			<button class="btn btn-info" ng-click="signupform()" ui-sref=
+			"userdetail">Sign-Up</button>
 		</div>
 	</form>
 </div>

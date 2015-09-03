@@ -1,19 +1,28 @@
 (function(){
 	//Services...
-	/*var module = angular.module("app");
-	var github = function($http){
-
+	var module = angular.module("app");
+	var userdata = function($http){
+		var userdata=this;
+		userdata=[{
+				username:'jimit',
+				password:'jimit',
+				email:'jimit@jimit'
+			},
+			{
+				username:'demo',
+				password:'demo',
+				email:'demo@demo'
+			}
+		];
 		
 
 		return{
-			getUser: getUser,
-			getRepos: getRepos,
-			getRepoDetails:getRepoDetails
+			userdata: userdata
 		};
 	};
 
 
 
 
-module.factory("github",github);*/
+module.factory("userdata",userdata);
 }());

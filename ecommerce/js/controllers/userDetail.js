@@ -2,12 +2,20 @@
 	
 var app=angular.module('app');
 // body...
-var userDetail=function($scope,$location){
-	$scope.storedata=function(){
-		$location.path('/login');
-
+var userDetail=function($scope,userdata,$state){
+	var adduser=userdata;
+	$scope.addUserData=function(){
+		adduser.userdata.push({
+								username:$scope.username,
+								password:$scope.password,
+								email:$scope.email
+							});
+		if($scope.username && $scope.password && $scope.email){
+			$state.go('login');
+		}
+		
 	}
-	console.log('userdetails',$scope);
+	
 };
 
 
