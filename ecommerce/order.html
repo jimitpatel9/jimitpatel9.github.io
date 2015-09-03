@@ -7,17 +7,20 @@
 					<th>Item</th>
 					<th>Qty</th>
 					<th>Price</th>
+					<th>Remove</th>
 				</tr>
 			</thead>
-			<tr class="active" ng-repeat="item in itemList.cartItem">
+			<tr class="active" ng-repeat="item in itemList.cartItem track by $index">
 				<th><span><img ng-src="{{item.img}}"></span></th>
-				<th> <p>{{item.qty}}<p></th>
+				<th><p>{{item.qty}}<p></th>
 				<th><p>{{item.qty * item.price}}<p></th>
+				<th><i class="glyphicon glyphicon-remove" ng-click="removeAnItem(index)" style="cursor:pointer"></i></th>
 			</tr>
 			<tr class="active">
 				<th>Total</th>
 				<th>{{totalQty}}</th>
 				<th>{{totalPrice}}</th>
+				<th></th>
 			</tr>
 		</table>
 	</div>

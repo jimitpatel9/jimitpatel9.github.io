@@ -16,6 +16,17 @@ var orderCtrl=function($scope,orderdata,$rootScope,$stateParams){
 		$scope.totalQty=0;
 		$scope.totalPrice=0;
 	}
+	$scope.removeAnItem=function(index){
+		$scope.itemList.cartItem.splice(index,1);
+		$scope.totalQty=0;
+		$scope.totalPrice=0;
+		for(var i=0;i < $scope.itemList.cartItem.length; i++){
+			$scope.totalQty +=$scope.itemList.cartItem[i].qty;
+			$scope.totalPrice +=($scope.itemList.cartItem[i].qty 
+				                  *	$scope.itemList.cartItem[i].price);
+		}
+		console.log($scope.totalQty);
+	}
 	
 };
 
