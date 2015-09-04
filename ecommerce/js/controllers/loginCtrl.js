@@ -4,7 +4,7 @@ var app=angular.module('app');
 // body...
 var loginCtrl=function($scope,userdata,$rootScope,$state,$stateParams){
 	var userinfo=userdata;
-	$scope.alert=$stateParams;
+	
 	$scope.closeAlert = function() {
 	    $scope.alert=null;
 	  };

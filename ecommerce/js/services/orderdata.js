@@ -6,6 +6,7 @@
 		var cartItem=[];
 
 		iteminfo=[{
+				uid:'1',
 				name:'Pen',
 				orignalprice:5.00,
 				ourprice:4.00,
@@ -14,6 +15,7 @@
 				img:'images/item/pen.png'
 			},
 			{
+				uid:'2',
 				name:'Pencil',
 				orignalprice:5.00,
 				ourprice:3.00,
@@ -22,6 +24,7 @@
 				img:'images/item/pencil.png'
 			},
 			{
+				uid:'3',
 				name:'Eraser',
 				orignalprice:5.00,
 				ourprice:3.00,
@@ -30,6 +33,7 @@
 				img:'images/item/eraser.png'
 			},
 			{
+				uid:'4',
 				name:'Compass Box',
 				orignalprice:15.00,
 				ourprice:10.00,
