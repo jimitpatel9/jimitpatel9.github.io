@@ -2,9 +2,9 @@
 	
 var app=angular.module('app');
 // body...
-var loginCtrl=function($scope,userdata,$rootScope,$state){
+var loginCtrl=function($scope,userdata,$rootScope,$state,$stateParams){
 	var userinfo=userdata;
-	
+	$scope.alert=$stateParams;
 	$scope.closeAlert = function() {
 	    $scope.alert=null;
 	  };
@@ -25,14 +25,14 @@ var loginCtrl=function($scope,userdata,$rootScope,$state){
 
 		}
 	};
-	$rootScope.$on('$stateChangeStart', 
+	/*$rootScope.$on('$stateChangeStart', 
 		function(event, toState, toParams, fromState, fromParams){ 
 		    if(fromState==='userdetail') {
 		    	$scope.alert='Welcome to Online Shopping App !';
 		    }
 		    // transitionTo() promise will be rejected with 
 		    // a 'transition prevented' error
-		})
+		})*/
 	
 };
 

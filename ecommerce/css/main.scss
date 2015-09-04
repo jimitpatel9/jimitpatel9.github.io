@@ -1,6 +1,7 @@
 /*Mixins*/
 /*End Mixins*/
 /*Variables*/
+$blue-color: #0B0B48;
 /*End Variables*/
 
 /*General Classess*/
@@ -9,7 +10,7 @@
 }
 /*End General Classess*/
 body{
-	background-color: #0B0B48;
+	background-color: $blue-color;
 	width: 420px;
 	margin: 0 auto;
 }
@@ -34,22 +35,83 @@ body{
 		margin:5px;
 	}
 }
-.logo{
-	display: block;
-	width: 50px;
-	height: 50px;
-	margin: 10px auto;
-	img{
-		width: 100%;
+//ItemList Page Header
+nav{
+	border: none !important;
+	.navbar-brand {
+	    float: left;
+	    height: 50px;
+	    padding: 0;
+	    font-size: 18px;
+	    line-height: 20px;
+	    text-align: center;
+	    .logo{
+			display: inline-block;
+			margin: 0;
+		}
+		span{
+			display: inline-block;
+			margin: 0;
+			color: white;
+		}
 	}
+	.navbar-header{
+		background-color: $blue-color;
+		border: none;
+	}
+	.navbar-collapse{
+		background-color: $blue-color; 
+		border: none;
+		text-align: right;
+		a{
+			color: white !important;
+		}
+	}
+	
 }
+.logo{
+		display: block;
+		width: 50px;
+		height: 50px;
+		padding: 10px;
+		margin: 10px auto;
+		img{
+			width: 50px;
+		}
+	}
 //Header for itemList page
 .header{
 	color: white;
 	p{
 		margin-left: 30px;
 	}
+	.glyphicon-shopping-cart{
+		font-size: 30px;
+		float: right;
+		display: block;
+		position: relative;
+		top:10%;
+		span{
+			display: block;
+		    position: absolute;
+		    top: 3px;
+		    left: 14px;
+		    font-size: 14px;
+		    color: black;
+		}
+
+	}
+	.headerIcon {
+		margin: 10px;
+		h3{
+			display: block;
+		    float: left;
+		    margin: 0px;
+	    }
+	}
+		
 }
+//Ends Header for itemList page
 .glyphicon-star{
 	color: yellow;
 }
@@ -61,7 +123,7 @@ body{
 	li{
 		display: block;
 	    float: left;
-	    width: 49%;
+	    width: 190px;
 	    color: white;
 	    padding: 5px;
 	    margin-top: 30px;

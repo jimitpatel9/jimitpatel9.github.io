@@ -1,7 +1,43 @@
 <header class="header">
-	<span class="logo" ui-sref="login"><img ng-src="images/logo.jpg"></span>
+	<nav class="navbar navbar-default" role="navigation">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" ng-click="navbarCollapsed = !navbarCollapsed">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">
+	        <!-- your branding here -->
+	        <img ng-src="images/logo.jpg"ui-sref="login"class="logo"><span>E-Shop</span>
+	        <div class="clear"></div>
+	      </a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" ng-class="{'in':!navbarCollapsed}">
+	      <!-- your normal collapsable content here -->
+	      <ul class="nav navbar-nav">
+	      	<li>
+	      		<a href="#/" data-toggle="collapse" data-target=".navbar-collapse">Today's Deal</a>
+	      	</li>
+	      	<li>
+	      		<a href="#/" data-toggle="collapse" data-target=".navbar-collapse">Gift Card</a>
+	      	</li>
+	      	<li>
+	      		<a href="#/" data-toggle="collapse" data-target=".navbar-collapse">Home</a>
+	      	</li>
+	      </ul>
+	    </div>
+	</nav>
+	<div class="headerIcon">
+		<h3>Welcome {{username}}</h3>
+		<div class="glyphicon glyphicon-shopping-cart" ><span>{{itemList.cartItem.length}}</span></div>
+		<div class="clear"></div>
+	</div>
 	<input type="text" class="form-control" ng-model="searchText" placeholder="Search for...">
-	<h3>Welcome {{username}}</h3>
+	
 </header>
 
 <ul class="itemList" >

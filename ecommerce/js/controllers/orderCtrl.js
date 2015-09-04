@@ -23,7 +23,7 @@ var orderCtrl=function($scope,orderdata,$rootScope,$stateParams){
 		for(var i=0;i < $scope.itemList.cartItem.length; i++){
 			$scope.totalQty +=$scope.itemList.cartItem[i].qty;
 			$scope.totalPrice +=($scope.itemList.cartItem[i].qty 
-				                  *	$scope.itemList.cartItem[i].price);
+				                  *	$scope.itemList.cartItem[i].ourprice);
 		}
 		console.log($scope.totalQty);
 	}

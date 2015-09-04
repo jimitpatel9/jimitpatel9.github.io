@@ -11,7 +11,7 @@ var userDetail=function($scope,userdata,$state){
 								email:$scope.email
 							});
 		if($scope.username && $scope.password && $scope.email){
-			$state.go('login');
+			$state.go('login',{success:'Registered Successfully'});
 		}
 		
 	}
