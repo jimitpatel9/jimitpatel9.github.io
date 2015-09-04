@@ -1,15 +1,33 @@
 <header class="header">
 	<span class="logo" ui-sref="login"><img ng-src="images/logo.jpg"></span>
-	<p>Welcome {{username}}..</p>
+	<input type="text" class="form-control" ng-model="searchText" placeholder="Search for...">
+	<h3>Welcome {{username}}</h3>
 </header>
 
 <ul class="itemList" >
-
-	<li ng-repeat="item in itemList.iteminfo">
-		<img ng-src="{{item.img}}"/><br>
-		<p>{{item.name}}<br>$ {{item.price}}</p>
-		<label>Qty</label>
-		<input ng-model="item.qty" type="number" placeholder="0"/>
+	<li ng-repeat="item in itemList.iteminfo | filter:searchText">
+		<img ng-src="{{item.img}}"/>
+		<h4>{{item.name}}</h4>
+		<div class="table-responsive">
+			<table class="table">
+				<tr>
+					<th>Org Price : </th>
+					<th><s> ${{item.orignalprice}}</s></th>
+				</tr>
+				<tr>
+					<th>Our Price : </th>
+					<th>${{item.ourprice}}</th>
+				</tr>
+				<tr>
+					<th>Ratings :</th>
+					<th><rating ng-model="item.rate" max="max" readonly="isReadonly"></rating></th>
+				</tr>
+				<tr>
+					<th><label>Qty</label></th>
+					<th><input ng-model="item.qty" type="number" placeholder="0"/></th>
+				</tr>
+			</table>
+		</div>
 		<button class="btn btn-warning"  ng-click="add($index,item.qty)">Add To Cart</button>
 	</li>
 	<div class="clear"></div>

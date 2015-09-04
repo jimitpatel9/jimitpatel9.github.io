@@ -5,6 +5,8 @@ var app=angular.module('app');
 var userCtrl=function($scope,$stateParams,$state,orderdata){
 	$scope.username=$stateParams.username;
     $scope.itemList=orderdata;
+    $scope.max=5;
+    $scope.isReadonly=true;
 	$scope.add=function(index,qty){
 		$scope.itemList.iteminfo[index].qty=qty;
 		$scope.itemList.cartItem.push($scope.itemList.iteminfo[index]);

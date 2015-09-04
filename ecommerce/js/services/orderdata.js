@@ -7,26 +7,34 @@
 
 		iteminfo=[{
 				name:'Pen',
-				price:4.00,
+				orignalprice:5.00,
+				ourprice:4.00,
 				qty:1,
+				rate:4,
 				img:'images/item/pen.png'
 			},
 			{
 				name:'Pencil',
-				price:3.00,
+				orignalprice:5.00,
+				ourprice:3.00,
 				qty:1,
+				rate:3,
 				img:'images/item/pencil.png'
 			},
 			{
 				name:'Eraser',
-				price:3.00,
+				orignalprice:5.00,
+				ourprice:3.00,
 				qty:1,
+				rate:4,
 				img:'images/item/eraser.png'
 			},
 			{
 				name:'Compass Box',
-				price:10.00,
+				orignalprice:15.00,
+				ourprice:10.00,
 				qty:1,
+				rate:3,
 				img:'images/item/compass.jpg'
 			}];
 		

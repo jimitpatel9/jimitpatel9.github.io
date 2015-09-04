@@ -2,7 +2,7 @@
 	
 var app=angular.module('app');
 // body...
-var loginCtrl=function($scope,userdata,$rootScope){
+var loginCtrl=function($scope,userdata,$rootScope,$state){
 	var userinfo=userdata;
 	
 	$scope.closeAlert = function() {
@@ -13,13 +13,12 @@ var loginCtrl=function($scope,userdata,$rootScope){
 		for(var i=0;i<userinfo.userdata.length;i++){
 			if(userinfo.userdata[i].username===$scope.username && 
 				userinfo.userdata[i].password===$scope.password){
-				
 				tracker=true;
 			}
 		}
 		if(tracker===true){
-			
 			$scope.error=false;
+			$state.go('displayProducts',{username:$scope.username});
 		}
 		else{
 			$scope.error="Username and Password do not Match!!!";

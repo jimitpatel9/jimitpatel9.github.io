@@ -12,6 +12,7 @@ body {
   width: 420px;
   margin: 0 auto; }
 
+/*Login Page CSS*/
 .login p {
   text-align: center; }
   .login p input[type=text], .login p input[type=password], .login p input {
@@ -40,29 +41,39 @@ body {
   .header p {
     margin-left: 30px; }
 
+.glyphicon-star {
+  color: yellow; }
+
 .itemList {
   display: block;
   width: 100%;
   padding: 0px;
-  height: auto;
-  clear: both; }
+  height: auto; }
   .itemList li {
     display: block;
     float: left;
-    width: 150px;
-    margin-left: 30px;
+    width: 49%;
     color: white;
     padding: 5px;
     margin-top: 30px;
-    border: 1px solid #5bc0de;
+    text-align: center;
     text-align: center; }
     .itemList li img {
-      width: 100%; }
+      width: 100%;
+      height: 150px; }
     .itemList li input[type=number] {
       color: black;
       width: 50px;
-      margin: 10px;
       padding: 0px 5px; }
+  .itemList li:nth-child(2n+2) {
+    margin-left: 7px; }
+  .itemList .table-responsive {
+    border: none; }
+    .itemList .table-responsive th {
+      border: none; }
+
+.form-control {
+  border-radius: 20px; }
 
 .orderlist th {
   width: 33%;
