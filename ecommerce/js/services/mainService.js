@@ -6,7 +6,14 @@
 		userdata=[{
 				username:'jimit',
 				password:'jimit',
-				email:'jimit@jimit'
+				email:'jimit@jimit',
+				address:{
+					street:'',
+					city:'',
+					state:'',
+					zip:'',
+					number:''
+				}
 			},
 			{
 				username:'demo',

@@ -19,7 +19,8 @@ body {
     padding-left: 10px;
     color: black;
     width: 80%;
-    height: 40px; }
+    height: 40px;
+    border-radius: 5px; }
 .login div {
   text-align: center;
   color: red;
@@ -134,5 +135,10 @@ nav {
 .orderlist button {
   width: 100%;
   margin-top: 20px; }
+
+.checkout p {
+  color: white; }
+.checkout input {
+  width: 100% !important; }
 
 /*# sourceMappingURL=main.css.map */

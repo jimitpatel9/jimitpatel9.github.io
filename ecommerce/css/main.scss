@@ -23,6 +23,7 @@ body{
 			color: black;
 			width: 80%;
 			height: 40px;
+			border-radius: 5px;
 		}
 	}
 	div{
@@ -170,5 +171,14 @@ nav{
 	button{
 		width: 100%;
 		margin-top: 20px;
+	}
+}
+//Checkout page
+.checkout{
+	p{
+		color:white;
+	}
+	input{
+		width: 100% !important;
 	}
 }

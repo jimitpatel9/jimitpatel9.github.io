@@ -24,6 +24,11 @@
 				url:'/:username/order',
 				templateUrl:"order.html",
 				controller:"orderCtrl"
+			})
+			.state("checkout",{
+				url:'/:username/checkout',
+				templateUrl:"checkout.html",
+				controller:"checkoutCtrl"
 			});
 			//$urlRouterProvider.otherwise({redirectTo:''});
 	}

@@ -13,18 +13,18 @@
 			<tr class="active" ng-repeat="item in itemList.cartItem">
 				<th><span><img ng-src="{{item.img}}"></span></th>
 				<th><p>{{item.qty}}<p></th>
-				<th><p>{{item.qty * item.ourprice}}<p></th>
+				<th><p>${{item.qty * item.ourprice}}<p></th>
 				<th><i class="glyphicon glyphicon-remove" ng-click="removeAnItem(index)" style="cursor:pointer"></i></th>
 			</tr>
 			<tr class="active">
 				<th>Total</th>
 				<th>{{totalQty}}</th>
-				<th>{{totalPrice}}</th>
+				<th>${{totalPrice}}</th>
 				<th></th>
 			</tr>
 		</table>
 	</div>
 	<button class="btn btn-info" ui-sref="displayProducts({username:username})"><span class="glyphicon glyphicon-chevron-left"></span> Buy More</button>
 	<button class="btn btn-danger" ng-click="clearCart()"><span class="glyphicon glyphicon-trash"></span> Clear Cart</button>
-	<button class="btn btn-warning" ><span class="glyphicon glyphicon-ok"></span> Checkout</button>
+	<button class="btn btn-warning" ui-sref="checkout({username:username})"><span class="glyphicon glyphicon-ok"></span> Checkout</button>
 </div>
