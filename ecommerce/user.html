@@ -10,7 +10,7 @@
 	      </button>
 	      <a class="navbar-brand" href="#">
 	        <!-- your branding here -->
-	        <img ng-src="images/logo.jpg"ui-sref="login"class="logo"><span>E-Shop</span>
+	        <img ng-src="images/logo.jpg" ui-sref="login" class="logo"><span>E-Shop</span>
 	        <div class="clear"></div>
 	      </a>
 	    </div>
@@ -33,7 +33,7 @@
 	</nav>
 	<div class="headerIcon">
 		<h3>Welcome {{username}}</h3>
-		<div class="glyphicon glyphicon-shopping-cart" ><span>{{itemList.cartItem.length}}</span></div>
+		<div class="glyphicon glyphicon-shopping-cart" ><span>{{cartItemList.cartItem.length}}</span></div>
 		<div class="clear"></div>
 	</div>
 	<input type="text" class="form-control" ng-model="searchText" placeholder="Search for...">
@@ -41,8 +41,8 @@
 </header>
 
 <ul class="itemList" >
-	<li ng-repeat="item in itemList.iteminfo | filter:searchText">
-		<img ng-src="{{item.img}}"/>
+	<li ng-repeat="item in itemList | filter:searchText">
+		<img ng-src="{{item.imageUrl}}"/>
 		<h4>{{item.name}}</h4>
 		<div class="table-responsive">
 			<table class="table">
@@ -64,7 +64,7 @@
 				</tr>
 			</table>
 		</div>
-		<button class="btn btn-warning"  ng-click="add($index,item.qty,item.uid)">Add To Cart</button>
+		<button class="btn btn-warning"  ng-click="add($index,item.qty,item.pid)">Add To Cart</button>
 	</li>
 	<div class="clear"></div>
 </ul>

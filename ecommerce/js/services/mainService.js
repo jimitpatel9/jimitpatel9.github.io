@@ -1,35 +1,12 @@
 (function(){
 	//Services...
-	var module = angular.module("app");
-	var userdata = function($http){
-		var userdata=this;
-		userdata=[{
-				username:'jimit',
-				password:'jimit',
-				email:'jimit@jimit',
-				address:{
-					street:'',
-					city:'',
-					state:'',
-					zip:'',
-					number:''
-				}
-			},
-			{
-				username:'demo',
-				password:'demo',
-				email:'demo@demo'
-			}
-		];
-		
-
-		return{
-			userdata: userdata
-		};
+	var module = angular.module("common.services");
+	var userdata = function($resource){
+		return $resource("/user");
 	};
 
 
 
 
-module.factory("userdata",userdata);
+module.factory("userdata",["$resource",userdata]);
 }());

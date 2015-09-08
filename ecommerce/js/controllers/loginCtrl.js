@@ -3,16 +3,18 @@
 var app=angular.module('app');
 // body...
 var loginCtrl=function($scope,userdata,$rootScope,$state,$stateParams){
-	var userinfo=userdata;
-	
+	var userinfo=null;
+	userdata.query(function(data){
+    	userinfo=data;	
+    });
 	$scope.closeAlert = function() {
 	    $scope.alert=null;
 	  };
 	$scope.validateLogin=function(){
 		var tracker=false;
-		for(var i=0;i<userinfo.userdata.length;i++){
-			if(userinfo.userdata[i].username===$scope.username && 
-				userinfo.userdata[i].password===$scope.password){
+		for(var i=0;i<userinfo.length;i++){
+			if(userinfo[i].username===$scope.username && 
+				userinfo[i].password===$scope.password){
 				tracker=true;
 			}
 		}
@@ -25,19 +27,12 @@ var loginCtrl=function($scope,userdata,$rootScope,$state,$stateParams){
 
 		}
 	};
-	/*$rootScope.$on('$stateChangeStart', 
-		function(event, toState, toParams, fromState, fromParams){ 
-		    if(fromState==='userdetail') {
-		    	$scope.alert='Welcome to Online Shopping App !';
-		    }
-		    // transitionTo() promise will be rejected with 
-		    // a 'transition prevented' error
-		})*/
 	
 };
 
 
 
-app.controller('loginCtrl',loginCtrl);
+app.controller('loginCtrl',
+	["$scope","userdata","$rootScope","$state","$stateParams",loginCtrl]);
 	
 })();

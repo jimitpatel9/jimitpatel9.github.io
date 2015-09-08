@@ -1,3 +1,4 @@
 (function(){
-	var app = angular.module('app',['ui.router','ui.bootstrap']);
+	var app = angular.module('app',
+		['common.services','productResourceMock','ui.router','ui.bootstrap']);
 })();
