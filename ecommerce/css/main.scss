@@ -81,6 +81,13 @@ nav{
 		}
 	}
 //Header for itemList page
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent !important;
+
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent !important;
+}
 .header{
 	color: white;
 	p{
