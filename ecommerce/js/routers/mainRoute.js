@@ -16,7 +16,7 @@
 				controller:"productDisplayCtrl"
 			})
 			.state("productDetails",{
-				url:"/product/:pid",
+				url:"/product/:pid/:username",
 				templateUrl:"productDetails.html",
 				controller:"productDetailsCtrl",
 				resolve:{

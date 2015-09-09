@@ -2,7 +2,8 @@
 	
 var app=angular.module('app');
 // body...
-var productDetailsCtrl=function($scope,product){
+var productDetailsCtrl=function($scope,$stateParams,product){
+	$scope.user=$stateParams.username;
 	$scope.product=product;
 	//Navbar
 	$scope.navbarCollapsed=true;
@@ -14,6 +15,6 @@ var productDetailsCtrl=function($scope,product){
 
 
 app.controller('productDetailsCtrl',
-	["$scope","product",productDetailsCtrl]);
+	["$scope","$stateParams","product",productDetailsCtrl]);
 	
 })();
