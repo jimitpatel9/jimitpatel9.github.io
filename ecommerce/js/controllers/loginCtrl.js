@@ -2,7 +2,7 @@
 	
 var app=angular.module('app');
 // body...
-var loginCtrl=function($scope,userdata,$rootScope,$state,$stateParams){
+var loginCtrl=function($scope,userdata,$state){
 	var userinfo=null;
 	userdata.query(function(data){
     	userinfo=data;	
@@ -33,6 +33,6 @@ var loginCtrl=function($scope,userdata,$rootScope,$state,$stateParams){
 
 
 app.controller('loginCtrl',
-	["$scope","userdata","$rootScope","$state","$stateParams",loginCtrl]);
+	["$scope","userdata","$state",loginCtrl]);
 	
 })();
