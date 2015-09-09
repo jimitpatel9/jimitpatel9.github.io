@@ -11,9 +11,21 @@
 				controller:'loginCtrl'
 			})
 			.state("displayProducts",{
-				url:"/user/:username",
-				templateUrl:"user.html",
-				controller:"userCtrl"
+				url:"/products/:username",
+				templateUrl:"productsDisplay.html",
+				controller:"productDisplayCtrl"
+			})
+			.state("productDetails",{
+				url:"/product/:pid",
+				templateUrl:"productDetails.html",
+				controller:"productDetailsCtrl",
+				resolve:{
+					productResource : "productResource",
+					product:function(productResource,$stateParams){
+						var pid=$stateParams.pid;
+						return productResource.get({pid:pid}).$promise;
+					}
+				}
 			})
 			.state("userdetail",{
 				url:'/userdetail',

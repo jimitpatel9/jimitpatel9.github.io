@@ -41,7 +41,7 @@
 </header>
 
 <ul class="itemList" >
-	<li ng-repeat="item in itemList | filter:searchText">
+	<li ng-repeat="item in itemList | productFilter:searchText" ng-click="productDetails(item.pid)">
 		<img ng-src="{{item.imageUrl}}"/>
 		<h4>{{item.name}}</h4>
 		<div class="table-responsive">
@@ -64,7 +64,7 @@
 				</tr>
 			</table>
 		</div>
-		<button class="btn btn-warning"  ng-click="add($index,item.qty,item.pid)">Add To Cart</button>
+		<button class="btn btn-warning"  ng-click="add($index,item.qty,item.pid,$event)">Add To Cart</button>
 	</li>
 	<div class="clear"></div>
 </ul>

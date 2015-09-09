@@ -52,19 +52,33 @@
 		var productUrl='api/products';
 		$httpBackend.expectGET(productUrl);
 		$httpBackend.whenGET(productUrl).respond(iteminfo);
+		var editingRegex= new RegExp(productUrl+"/[0-9][0-9]*",'');
+		$httpBackend.whenGET(editingRegex).respond(function(method,url,data){
+			var product={pid:0};
+			var parameters=url.split('/');
+			var length=parameters.length;
+			var id=parameters[length-1];
+			if(id>0){
+				for(var i=0;i<iteminfo.length;i++){
+					if(iteminfo[i].pid===id){
+						product=iteminfo[i];
+						break;
+					}
+				};
+			}
+			return[200,product,{}];
+		});
 
 		var userDetails='/user';
 		$httpBackend.whenGET(userDetails).respond(userdata);
 		$httpBackend.whenPOST(userDetails).respond(function(method,url,data){
 			var user=angular.fromJson(data);
-			userdata.push(user)
-			console.log(userdata);
+			userdata.push(user);
 			/*if(!user.email){
 				user.uid=userdata[userdata.length-1].uid+1;
 				userdata.push(user);
 			}*/
 			return[200];
-			
 		})
 		$httpBackend.whenGET(/^.+html/).passThrough();
     })

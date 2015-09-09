@@ -2,7 +2,7 @@
 	
 var app=angular.module('app');
 // body...
-var userCtrl=function($scope,$stateParams,$state,productResource,orderdata){
+var productDisplayCtrl=function($scope,$stateParams,$state,productResource,orderdata){
 	$scope.username=$stateParams.username;
 	$scope.cartItemList=orderdata;
     productResource.query(function(data){
@@ -12,8 +12,12 @@ var userCtrl=function($scope,$stateParams,$state,productResource,orderdata){
     $scope.max=5;
     $scope.isReadonly=true;
     $scope.navbarCollapsed=true;
-	$scope.add=function(index,qty,pid){
+    $scope.productDetails=function(pid){
+    	$state.go('productDetails',{pid:pid});
+    }
+	$scope.add=function(index,qty,pid,$event){
 		var itemPushed=true;
+		$event.stopPropagation();
 		for (var i = 0;i<$scope.cartItemList.cartItem.length;i++) {
 			if(pid===$scope.cartItemList.cartItem[i].pid){
 				$scope.cartItemList.cartItem[i].qty +=qty;
@@ -34,6 +38,7 @@ var userCtrl=function($scope,$stateParams,$state,productResource,orderdata){
 
 
 
-app.controller('userCtrl',["$scope","$stateParams","$state","productResource","orderdata",userCtrl]);
+app.controller('productDisplayCtrl',
+	["$scope","$stateParams","$state","productResource","orderdata",productDisplayCtrl]);
 	
 })();

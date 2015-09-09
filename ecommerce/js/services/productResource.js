@@ -5,7 +5,7 @@
 		
 		
 
-		return $resource("api/products");
+		return $resource("api/products/:pid");
 		
 	};
 

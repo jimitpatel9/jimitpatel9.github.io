@@ -150,15 +150,45 @@ nav{
 	li:nth-child(2n+2){
 		margin-left: 7px;
 	}
-	.table-responsive{
+}
+//Table Css
+.table-responsive{
 		border: none;
 		th{
-			border: none;
+			border: none !important;
 		}
 	}
-}
 .form-control{
 	border-radius: 20px;
+}
+//Product Details page
+.productDetails{
+	.panel-primary{
+			border-color: white !important;
+		.panel-heading{
+			background-color: $blue-color !important;
+
+			span{
+				font-weight: bold;
+				font-size: 14px;
+			}
+			button{
+				float: right;
+				position: relative;
+				right: -5px;
+				top: -7px;
+				background-color: $blue-color;
+				border-color: $blue-color;
+			}
+		}
+		.panel-body{
+			img{
+				display: block;
+				width: 100%;
+				padding-bottom: 10px;
+			}
+		}
+	}
 }
 //Cart Page
 .orderlist{

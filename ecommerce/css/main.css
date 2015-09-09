@@ -120,13 +120,33 @@ nav {
       padding: 0px 5px; }
   .itemList li:nth-child(2n+2) {
     margin-left: 7px; }
-  .itemList .table-responsive {
-    border: none; }
-    .itemList .table-responsive th {
-      border: none; }
+
+.table-responsive {
+  border: none; }
+  .table-responsive th {
+    border: none !important; }
 
 .form-control {
   border-radius: 20px; }
+
+.productDetails .panel-primary {
+  border-color: white !important; }
+  .productDetails .panel-primary .panel-heading {
+    background-color: #0B0B48 !important; }
+    .productDetails .panel-primary .panel-heading span {
+      font-weight: bold;
+      font-size: 14px; }
+    .productDetails .panel-primary .panel-heading button {
+      float: right;
+      position: relative;
+      right: -5px;
+      top: -7px;
+      background-color: #0B0B48;
+      border-color: #0B0B48; }
+  .productDetails .panel-primary .panel-body img {
+    display: block;
+    width: 100%;
+    padding-bottom: 10px; }
 
 .orderlist th {
   width: 33%;
