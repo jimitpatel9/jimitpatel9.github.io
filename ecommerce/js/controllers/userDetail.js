@@ -6,15 +6,21 @@ var userDetail=function($scope,userdata,$state){
 	
 
 	$scope.addUserData=function(){
-	
-	userdata.save(function(data){
-		console.log('submitted')
-	},{	username:$scope.username,
-		password:$scope.password,
-		email:$scope.email
-	});
+
+//to store the data
+	userdata.save(
+		function(data){},
+		{
+			username:$scope.username,
+			password:$scope.password,
+			email:$scope.email
+		}
+	);
+		if($scope.username && $scope.password && $scope.email){
+			$scope.$parent.error=true;
+			$state.go('home.login');
+		};
 		
-		$state.go('login');
 	}
 	
 };

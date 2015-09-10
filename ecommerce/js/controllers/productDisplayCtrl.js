@@ -4,6 +4,7 @@ var app=angular.module('app');
 // body...
 var productDisplayCtrl=function($scope,$stateParams,$state,productResource,orderdata){
 	$scope.cartItemList=orderdata;
+	
     productResource.query(function(data){
     	$scope.itemList=data;	
     });

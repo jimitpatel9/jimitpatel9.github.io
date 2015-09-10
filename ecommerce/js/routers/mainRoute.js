@@ -5,8 +5,14 @@
 		function configRoutes($stateProvider,$urlRouterProvider){
 
 		$stateProvider
-			.state('login',{
-				url:'',
+		.state('home',{
+				url:'/home',
+				abstract:true,
+				template:'<ui-view/>',
+				controller:'homeCtrl'
+			})
+			.state('home.login',{
+				url:'/login',
 				templateUrl:'login.html',
 				controller:'loginCtrl'
 			})
@@ -14,6 +20,14 @@
 				url:"/products/:username",
 				templateUrl:"productsDisplay.html",
 				controller:"productDisplayCtrl"
+				/*resolve:{
+					productResource : "productResource",
+					prod:function(productResource){
+						
+						return console.log(productResource.query().$promise);
+					}
+
+				}*/
 			})
 			.state("productDetails",{
 				url:"/product/:pid/:username",
@@ -25,9 +39,10 @@
 						var pid=$stateParams.pid;
 						return productResource.get({pid:pid}).$promise;
 					}
+
 				}
 			})
-			.state("userdetail",{
+			.state("home.userdetail",{
 				url:'/userdetail',
 				templateUrl:"userdetail.html",
 				controller:"userDetail"
@@ -42,7 +57,7 @@
 				templateUrl:"checkout.html",
 				controller:"checkoutCtrl"
 			});
-			//$urlRouterProvider.otherwise({redirectTo:''});
+			$urlRouterProvider.otherwise('/home/login');
 	}
 	app.run(['$state',function($state){
 

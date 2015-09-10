@@ -26,14 +26,16 @@ body{
 			border-radius: 5px;
 		}
 	}
-	div{
+	.loginSignup{
 		text-align: center;
 		button{
 			width: 100px;
 			margin-left: 10px;
-		}
-		color:red;
-		margin:5px;
+		}	
+	}
+	.ng-scope{
+		display: block;
+		text-align: center;
 	}
 }
 //ItemList Page Header

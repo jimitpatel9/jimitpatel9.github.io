@@ -4,12 +4,17 @@ var app=angular.module('app');
 // body...
 var loginCtrl=function($scope,userdata,$state){
 	var userinfo=null;
+	$scope.alerts = [{ 
+    	type: 'success',
+    	msg: 'You successfully Registered!' 
+ 	}];
+ 	$scope.closeAlert=function(index){
+ 		$scope.alerts.splice(index, 1);
+ 		$scope.$parent.error=false;
+ 	};
 	userdata.query(function(data){
     	userinfo=data;	
     });
-	$scope.closeAlert = function() {
-	    $scope.alert=null;
-	  };
 	$scope.validateLogin=function(){
 		var tracker=false;
 		for(var i=0;i<userinfo.length;i++){
