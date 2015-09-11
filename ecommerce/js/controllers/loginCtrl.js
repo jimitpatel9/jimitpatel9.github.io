@@ -3,7 +3,16 @@
 var app=angular.module('app');
 // body...
 var loginCtrl=function($scope,userdata,$state){
+
+	//user data from the mocke2e
+
 	var userinfo=null;
+	userdata.query(function(data){
+    	userinfo=data;	
+    });
+
+    //alert if the user sign-up
+
 	$scope.alerts = [{ 
     	type: 'success',
     	msg: 'You successfully Registered!' 
@@ -12,9 +21,9 @@ var loginCtrl=function($scope,userdata,$state){
  		$scope.alerts.splice(index, 1);
  		$scope.$parent.error=false;
  	};
-	userdata.query(function(data){
-    	userinfo=data;	
-    });
+
+	//validate the login info
+	
 	$scope.validateLogin=function(){
 		var tracker=false;
 		for(var i=0;i<userinfo.length;i++){
