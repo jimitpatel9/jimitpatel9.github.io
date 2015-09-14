@@ -110,6 +110,9 @@ nav {
 .glyphicon-star {
   color: yellow; }
 
+.glyphicon-star-empty:before {
+  content: ""; }
+
 .itemList {
   display: block;
   width: 100%;
