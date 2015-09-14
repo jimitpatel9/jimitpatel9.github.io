@@ -71,7 +71,7 @@ nav {
 .logo {
   display: block;
   width: 70px;
-  padding: 10px;
+  padding: 5px;
   margin: 10px auto; }
   .logo img {
     width: 70px; }
@@ -80,10 +80,8 @@ nav {
   background-color: transparent !important; }
 
 .navbar-default .navbar-toggle {
-  border-color: transparent !important; }
-  @media screen and (max-width: 449px) {
-    .navbar-default .navbar-toggle {
-      margin-top: 18px; } }
+  border-color: transparent !important;
+  margin-top: 18px; }
 
 .header {
   color: white; }
