@@ -14,7 +14,7 @@
 				<th><span><img ng-src="{{item.imageUrl}}"></span></th>
 				<th><p>{{item.qty}}<p></th>
 				<th><p>${{item.qty * item.ourprice}}<p></th>
-				<th><i class="glyphicon glyphicon-remove" ng-click="removeAnItem(index)" style="cursor:pointer"></i></th>
+				<th><i class="glyphicon glyphicon-remove" ng-click="removeAnItem($index)" style="cursor:pointer"></i></th>
 			</tr>
 			<tr class="active">
 				<th>Total</th>
