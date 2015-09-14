@@ -42,12 +42,77 @@
 			},
 			{
 				pid:'4',
-				name:'Compass Box',
+				name:'Guitar',
 				orignalprice:15.00,
 				ourprice:10.00,
 				qty:1,
 				rate:3,
-				imageUrl:'images/item/compass.jpg'
+				imageUrl:'images/item/guitar.png'
+			},
+			{
+				pid:'5',
+				name:'Ipad',
+				orignalprice:150.00,
+				ourprice:100.00,
+				qty:1,
+				rate:3,
+				imageUrl:'images/item/ipad.png'
+			},{
+				pid:'6',
+				name:'Iphone6',
+				orignalprice:750.00,
+				ourprice:699.00,
+				qty:1,
+				rate:3,
+				imageUrl:'images/item/iphone6.png'
+			},{
+				pid:'7',
+				name:'Keyboard',
+				orignalprice:15.00,
+				ourprice:10.00,
+				qty:1,
+				rate:3,
+				imageUrl:'images/item/keyboard.png'
+			},{
+				pid:'8',
+				name:'Laptop',
+				orignalprice:799.00,
+				ourprice:599.00,
+				qty:1,
+				rate:3,
+				imageUrl:'images/item/laptop.png'
+			},{
+				pid:'9',
+				name:'Teddy Beer',
+				orignalprice:50.00,
+				ourprice:40.00,
+				qty:1,
+				rate:3,
+				imageUrl:'images/item/teddybeer.png'
+			},{
+				pid:'10',
+				name:'Wrist Watch',
+				orignalprice:400.00,
+				ourprice:100.00,
+				qty:1,
+				rate:3,
+				imageUrl:'images/item/watch.png'
+			},{
+				pid:'11',
+				name:'Men Shoe',
+				orignalprice:79.00,
+				ourprice:69.00,
+				qty:1,
+				rate:3,
+				imageUrl:'images/item/shoes.png'
+			},{
+				pid:'12',
+				name:'Women Shoe',
+				orignalprice:49.00,
+				ourprice:39.00,
+				qty:1,
+				rate:3,
+				imageUrl:'images/item/womenshoes.png'
 			}];
 		var productUrl='api/products';
 		$httpBackend.expectGET(productUrl);
