@@ -1,28 +1,19 @@
-describe("loginCtrlTest", function() {
-beforeEach(module('common.services'));
-beforeEach(module('productResourceMock'));
-beforeEach(module('app'));
-var $scope;
-var controller;
-var httpLocalBackend;
+describe('Product Filter Test', function() {
+  beforeEach(module('app'));
+  var $filter;
 
-beforeEach(inject(function ($rootScope, $controller, $injector) {
-    $scope = $rootScope.$new();
-    controller = $controller("loginCtrl", {
-        $scope: $scope
-    });
-}));
+  beforeEach(inject(function(_$filter_){
+    $filter = _$filter_;
+  }));
 
-beforeEach(inject(function ($httpBackend) {
-    httpLocalBackend = $httpBackend;
-}));
-
-it('should get stuff', function () {
-    var url = 'api/products';
-    var httpResponse = [{ "stuffId": 1 }, { "stuffId": 2 }];
-    httpLocalBackend.expectGET(url).respond(200, httpResponse);
-    $scope.getStuff();
-    expect($scope.stuff.length).toBe(2);
-    //httpLocalBackend.flush();
-} );
+  it('returns array of object', function() {
+    var productFilter = $filter('productFilter');
+    var testData=[{name:'jimit',age:2},
+                {name:'nimit',age:3},
+                {name:'rahul',age:2}
+                ];
+    var output=[{name:'jimit',age:2},
+                {name:'nimit',age:3}];
+    expect(productFilter(testData ,'i' )).toEqual(output);
+  });
 });

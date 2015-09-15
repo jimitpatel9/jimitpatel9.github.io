@@ -33,12 +33,12 @@
 			},
 			{
 				pid:'3',
-				name:'Eraser',
+				name:'Belt',
 				orignalprice:5.00,
 				ourprice:3.00,
 				qty:1,
 				rate:4,
-				imageUrl:'images/item/eraser.png'
+				imageUrl:'images/item/belt.png'
 			},
 			{
 				pid:'4',
@@ -83,7 +83,7 @@
 				imageUrl:'images/item/laptop.png'
 			},{
 				pid:'9',
-				name:'Teddy Beer',
+				name:'Teddy Bear',
 				orignalprice:50.00,
 				ourprice:40.00,
 				qty:1,
@@ -114,6 +114,7 @@
 				rate:3,
 				imageUrl:'images/item/womenshoes.png'
 			}];
+
 		var productUrl='api/products';
 		$httpBackend.expectGET(productUrl);
 		$httpBackend.whenGET(productUrl).respond(iteminfo);

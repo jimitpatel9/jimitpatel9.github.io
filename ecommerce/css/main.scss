@@ -103,6 +103,9 @@ nav{
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
     background-color: transparent !important;
 }
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #00C9FB;
+}
 .navbar-default .navbar-toggle {
     border-color: transparent !important;
 	margin-top:18px;    	
