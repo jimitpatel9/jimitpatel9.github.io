@@ -1,19 +1,19 @@
-describe('Product Filter Test', function() {
-  beforeEach(module('app'));
-  var $filter;
+describe('loginCtrlTest', function() {
+  var $scope,loginCtrl;
+  describe('$scope.validateLogin',function ( ){
+    beforeEach(module('app'));
 
-  beforeEach(inject(function(_$filter_){
-    $filter = _$filter_;
-  }));
+    beforeEach(inject(function ($controller, $rootScope) {
+      $scope = $rootScope.$new();
+      loginCtrl = $controller('loginCtrl', {
+        $scope: $scope
+      });
+    }));
+    it('validate the user login', function() {
 
-  it('returns array of object', function() {
-    var productFilter = $filter('productFilter');
-    var testData=[{name:'jimit',age:2},
-                {name:'nimit',age:3},
-                {name:'rahul',age:2}
-                ];
-    var output=[{name:'jimit',age:2},
-                {name:'nimit',age:3}];
-    expect(productFilter(testData ,'i' )).toEqual(output);
+      var controller = loginCtrl;
+
+      expect($scope.foo).toEqual('foo');
+    });
   });
 });
