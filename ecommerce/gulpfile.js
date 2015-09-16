@@ -1,33 +1,24 @@
 var gulp = require('gulp');
-var karma = require('gulp-karma');
-var jasmine = require('gulp-jasmine');
 var inject = require('gulp-inject');
-var testFiles = [
-  'js/angular/angular.js',
-    'node_modules/angular-mocks/angular-mocks.js',
-      'tests/**/*.js',
-      'tests/loginCtrlTest.js',
-      '*.js',
-      'tests/*.js'
-];
- 
-gulp.task('test', function() {
-  // Be sure to return the stream 
-  return gulp.src(testFiles)
-    .pipe(karma({
-      configFile: 'karma.conf.js',
-      action: 'run'
-    }))
-    .on('error', function(err) {
-      // Make sure failed tests cause gulp to exit non-zero 
-      throw err;
-    });
+var config = require('./gulp.config')();
+var Server = require('karma').Server;
+
+/**
+ * Run test once and exit
+ */
+gulp.task('test', function (done) {
+    new Server({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, done).start();
 });
- 
-gulp.task('default', function() {
-  gulp.src(testFiles)
-    .pipe(karma({
-      configFile: 'karma.conf.js',
-      action: 'watch'
-    }));
+
+gulp.task('wiredep', function () {
+    var options= config.getWiredepDefaultOptions();
+    var wiredep = require('wiredep').stream;
+    return gulp
+        .src(config.index)
+        .pipe(wiredep(options))
+        .pipe(inject(gulp.src(config.js)))
+        .pipe(gulp.dest(config.client));
 });
