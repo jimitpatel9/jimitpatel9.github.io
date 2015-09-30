@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var inject = require('gulp-inject');
+var sass=require('gulp-sass');
 var config = require('./gulp.config')();
 var Server = require('karma').Server;
 
@@ -21,4 +22,13 @@ gulp.task('wiredep', function () {
         .pipe(wiredep(options))
         .pipe(inject(gulp.src(config.js)))
         .pipe(gulp.dest(config.client));
+});
+gulp.task('convert',function(){
+    return gulp
+        .src('./css/*.scss')
+        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(gulp.dest('./css'))
+});
+gulp.task('sass:watch', function () {
+    gulp.watch('./css/*.scss', ['convert']);
 });

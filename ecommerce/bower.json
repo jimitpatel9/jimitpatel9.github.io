@@ -14,9 +14,12 @@
     "tests"
   ],
   "dependencies": {
+    "angular-animate": "~1.4.6",
     "angular-bootstrap": "~0.13.4",
+    "angular-carousel": "~0.3.13",
     "angular-mocks": "~1.4.5",
     "angular-resource": "~1.4.5",
+    "angular-route": "~1.4.6",
     "angular-ui-bootstrap": "~0.13.4",
     "angular-ui-router": "ui-router#~0.2.15",
     "AngularJS": "angular-latest#~1.4.5",

@@ -20,7 +20,7 @@
 				ourprice:4.00,
 				qty:1,
 				rate:4,
-				imageUrl:'images/item/pen.png'
+				imageUrl:['images/item/pen.png','images/item/pencil.png']
 			},
 			{
 				pid:'2',
@@ -29,7 +29,7 @@
 				ourprice:3.00,
 				qty:1,
 				rate:3,
-				imageUrl:'images/item/pencil.png'
+				imageUrl:['images/item/pencil.png']
 			},
 			{
 				pid:'3',
@@ -38,7 +38,7 @@
 				ourprice:3.00,
 				qty:1,
 				rate:4,
-				imageUrl:'images/item/belt.png'
+				imageUrl:['images/item/belt.png']
 			},
 			{
 				pid:'4',
@@ -47,7 +47,7 @@
 				ourprice:10.00,
 				qty:1,
 				rate:3,
-				imageUrl:'images/item/guitar.png'
+				imageUrl:['images/item/guitar.png']
 			},
 			{
 				pid:'5',
@@ -56,7 +56,7 @@
 				ourprice:100.00,
 				qty:1,
 				rate:3,
-				imageUrl:'images/item/ipad.png'
+				imageUrl:['images/item/ipad.png']
 			},{
 				pid:'6',
 				name:'Iphone6',
@@ -64,7 +64,7 @@
 				ourprice:699.00,
 				qty:1,
 				rate:3,
-				imageUrl:'images/item/iphone6.png'
+				imageUrl:['images/item/iphone6.png']
 			},{
 				pid:'7',
 				name:'Keyboard',
@@ -72,7 +72,7 @@
 				ourprice:10.00,
 				qty:1,
 				rate:3,
-				imageUrl:'images/item/keyboard.png'
+				imageUrl:['images/item/keyboard.png']
 			},{
 				pid:'8',
 				name:'Laptop',
@@ -80,7 +80,7 @@
 				ourprice:599.00,
 				qty:1,
 				rate:3,
-				imageUrl:'images/item/laptop.png'
+				imageUrl:['images/item/laptop.png']
 			},{
 				pid:'9',
 				name:'Teddy Bear',
@@ -88,7 +88,7 @@
 				ourprice:40.00,
 				qty:1,
 				rate:3,
-				imageUrl:'images/item/teddybeer.png'
+				imageUrl:['images/item/teddybeer.png']
 			},{
 				pid:'10',
 				name:'Wrist Watch',
@@ -96,7 +96,7 @@
 				ourprice:100.00,
 				qty:1,
 				rate:3,
-				imageUrl:'images/item/watch.png'
+				imageUrl:['images/item/watch.png']
 			},{
 				pid:'11',
 				name:'Men Shoe',
@@ -104,7 +104,7 @@
 				ourprice:69.00,
 				qty:1,
 				rate:3,
-				imageUrl:'images/item/shoes.png'
+				imageUrl:['images/item/shoes.png']
 			},{
 				pid:'12',
 				name:'Women Shoe',
@@ -112,7 +112,7 @@
 				ourprice:39.00,
 				qty:1,
 				rate:3,
-				imageUrl:'images/item/womenshoes.png'
+				imageUrl:['images/item/womenshoes.png']
 			}];
 
 		var productUrl='api/products';

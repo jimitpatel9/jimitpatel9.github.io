@@ -2,7 +2,7 @@
 	
 var app=angular.module('app');
 // body...
-var loginCtrl=function($scope,userdata,$state){
+var loginCtrl=function($scope,userdata,$state,$rootScope){
 
 	//user data from the mocke2e
 
@@ -47,6 +47,6 @@ var loginCtrl=function($scope,userdata,$state){
 
 
 app.controller('loginCtrl',
-	["$scope","userdata","$state",loginCtrl]);
+	["$scope","userdata","$state","$rootScope",loginCtrl]);
 	
 })();

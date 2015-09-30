@@ -8,8 +8,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "angular": "1.4.5",
-    "angular-mocks": "1.4.5",
+    "angular": "^1.4.5",
+    "angular-mocks": "^1.4.5",
+    "angular-route": "^1.4.6",
     "bower": "^1.5.2",
     "gulp": "^3.9.0",
     "gulp-inject": "^2.2.0",

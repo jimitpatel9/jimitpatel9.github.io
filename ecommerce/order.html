@@ -11,7 +11,7 @@
 				</tr>
 			</thead>
 			<tr class="active" ng-repeat="item in cartItemList.cartItem">
-				<th><span><img ng-src="{{item.imageUrl}}"></span></th>
+				<th><span><img ng-src="{{item.imageUrl[0]}}"></span></th>
 				<th><p>{{item.qty}}<p></th>
 				<th><p>${{item.qty * item.ourprice}}<p></th>
 				<th><i class="glyphicon glyphicon-remove" ng-click="removeAnItem($index)" style="cursor:pointer"></i></th>

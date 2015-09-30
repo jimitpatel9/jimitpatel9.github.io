@@ -13,10 +13,11 @@ $mobile:449px;
 /*End General Classess*/
 body{
 	background-color: $blue-color;
-	margin: 0 auto;
+
 }
 .container{
 	width: 450px;
+  	margin: 0 auto;
 	padding: 0px;
 	@media screen and (min-width: $greaterthen-Tablet) {
     	width: 750px; 
@@ -27,6 +28,11 @@ body{
 }
 /*Login Page CSS*/
 .login{
+  .signupalert{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom:10px;
+  }
 	p{
 		text-align: center;
 		input[type=text],input[type=password],input{
@@ -47,6 +53,30 @@ body{
 	.ng-scope{
 		display: block;
 		text-align: center;
+	}
+}
+//Userdetails page
+.userdetails{
+	.checking{
+	  position: relative;
+	  .check-in-process{
+		position: absolute;
+		top:0px;
+		right:10%;
+		color:green;
+
+		img	{
+		  display: inline-block;
+		  width: 40px;
+		}
+
+	  }
+	  .already-exist{
+		position: absolute;
+		color: red;
+		top:10px;
+		right:13%;
+	  }
 	}
 }
 //ItemList Page Header
@@ -218,11 +248,27 @@ nav{
 			}
 		}
 		.panel-body{
-			img{
-				display: block;
-				width: 100%;
-				padding-bottom: 10px;
+		  .carousel{
+			height: 360px;
+			.carousel-indicators li{
+			  border: 1px solid #000;
 			}
+			.carousel-indicators .active{
+			  background-color: #000000;
+			}
+			.carousel-inner{
+			  height: 100%;
+			  div.item.text-center.ng-isolate-scope.active,.ng-animate{
+				height: 100%;
+			  }
+			  img{
+				height: 100%;
+				width: 80%;
+				margin: 0 auto;
+			  }
+			}
+		  }
+
 		}
 	}
 }

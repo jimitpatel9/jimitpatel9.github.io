@@ -8,11 +8,11 @@
 
 /*End General Classess*/
 body {
-  background-color: #0B0B48;
-  margin: 0 auto; }
+  background-color: #0B0B48; }
 
 .container {
   width: 450px;
+  margin: 0 auto;
   padding: 0px; }
   @media screen and (min-width: 768px) {
     .container {
@@ -22,6 +22,11 @@ body {
       width: 300px; } }
 
 /*Login Page CSS*/
+.login .signupalert {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10px; }
+
 .login p {
   text-align: center; }
   .login p input[type=text], .login p input[type=password], .login p input {
@@ -40,6 +45,22 @@ body {
 .login .ng-scope {
   display: block;
   text-align: center; }
+
+.userdetails .checking {
+  position: relative; }
+  .userdetails .checking .check-in-process {
+    position: absolute;
+    top: 0px;
+    right: 10%;
+    color: green; }
+    .userdetails .checking .check-in-process img {
+      display: inline-block;
+      width: 40px; }
+  .userdetails .checking .already-exist {
+    position: absolute;
+    color: red;
+    top: 10px;
+    right: 13%; }
 
 nav {
   border: none !important; }
@@ -171,10 +192,20 @@ nav {
       top: -7px;
       background-color: #0B0B48;
       border-color: #0B0B48; }
-  .productDetails .panel-primary .panel-body img {
-    display: block;
-    width: 100%;
-    padding-bottom: 10px; }
+  .productDetails .panel-primary .panel-body .carousel {
+    height: 360px; }
+    .productDetails .panel-primary .panel-body .carousel .carousel-indicators li {
+      border: 1px solid #000; }
+    .productDetails .panel-primary .panel-body .carousel .carousel-indicators .active {
+      background-color: #000000; }
+    .productDetails .panel-primary .panel-body .carousel .carousel-inner {
+      height: 100%; }
+      .productDetails .panel-primary .panel-body .carousel .carousel-inner div.item.text-center.ng-isolate-scope.active, .productDetails .panel-primary .panel-body .carousel .carousel-inner .ng-animate {
+        height: 100%; }
+      .productDetails .panel-primary .panel-body .carousel .carousel-inner img {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto; }
 
 .orderlist th {
   width: 33%;
